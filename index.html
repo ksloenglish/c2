@@ -1,0 +1,1744 @@
+<!DOCTYPE html><html lang="en"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+<meta name="x-poe-datastore-behavior" content="local_only">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Cambridge C2 Proficiency Revision Exercise (1-804)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    :root {
+        /* Professional Ocean Blue Gradient - Modern & Eye-catching */
+        --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        
+        /* Glass Effect */
+        --glass-bg: rgba(255, 255, 255, 0.95);
+        --glass-border: rgba(255, 255, 255, 0.7);
+        
+        /* Colors - Deep Blue Professional Theme */
+        --primary-accent: #4f46e5; /* Indigo 600 - Professional blue */
+        --primary-hover: #4338ca; /* Indigo 700 */
+        --text-main: #1e293b; /* Slate 800 */
+        --text-muted: #64748b; /* Slate 500 */
+        --correct-color: #059669; /* Emerald 600 */
+        --incorrect-color: #dc2626; /* Red 600 */
+        --shadow-color: rgba(79, 70, 229, 0.25);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: var(--bg-gradient);
+        /* Add a subtle pattern overlay for texture */
+        background-image: var(--bg-gradient), radial-gradient(#ffffff 1px, transparent 1px);
+        background-size: 100% 100%, 20px 20px;
+        background-attachment: fixed;
+        color: var(--text-main);
+        margin: 0;
+        padding: 20px; 
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Centers vertically on desktop */
+        min-height: 100vh;
+        line-height: 1.5;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #a5b4fc;
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #818cf8;
+    }
+
+    .app-container {
+        width: 100%;
+        max-width: 850px;
+        background-color: var(--glass-bg);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 30px;
+        box-shadow: 0 25px 50px -12px var(--shadow-color);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin: auto; 
+    }
+
+    /* Decorative element */
+    .app-container::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    header {
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+        color: var(--primary-accent);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
+        font-weight: 600;
+        opacity: 0.9;
+    }
+
+    header h2 {
+        font-size: 1.8rem;
+        margin: 5px 0;
+        font-weight: 700;
+        background: linear-gradient(to right, #4f46e5, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    /* Screens */
+    #start-screen, #quiz-screen, #end-screen {
+        display: none;
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    #start-screen h3 {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        font-weight: 500;
+        color: var(--text-main);
+    }
+
+    .question-count-options {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    /* Buttons */
+    .btn {
+        background: linear-gradient(135deg, var(--primary-accent), var(--primary-hover));
+        color: white;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 12px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
+        font-family: inherit;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.5);
+        filter: brightness(1.1);
+    }
+
+    .btn:active {
+        transform: translateY(0);
+    }
+
+    /* Quiz Header */
+    #quiz-screen .quiz-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        background: rgba(241, 245, 249, 0.6);
+        padding: 10px 15px;
+        border-radius: 12px;
+        gap: 10px;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    #question-counter, #score-counter {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        white-space: nowrap;
+    }
+
+    #score-counter {
+        color: var(--primary-accent);
+    }
+
+    #return-btn {
+        background: white;
+        border: 1px solid #cbd5e1;
+        color: var(--text-muted);
+        padding: 6px 14px;
+        font-size: 0.8rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        white-space: nowrap;
+    }
+    #return-btn:hover {
+        background: #f8fafc;
+        color: var(--text-main);
+        border-color: #94a3b8;
+        transform: none;
+    }
+
+    /* Question Area */
+    #question-text {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        margin: 20px 0;
+        min-height: 60px;
+        font-weight: 400;
+        color: var(--text-main);
+    }
+
+    .blank {
+        display: inline-block;
+        width: 120px;
+        border-bottom: 2px solid var(--primary-accent);
+        margin: 0 6px;
+        vertical-align: -5px;
+    }
+
+    /* Options Grid */
+    #options-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    /* UPDATED OPTION BUTTON STYLES - VIBRANT GRADIENT */
+    .option-btn {
+        width: 100%;
+        /* Vibrant Purple/Violet Gradient */
+        background: linear-gradient(135deg, #818cf8 0%, #4f46e5 100%);
+        
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        
+        color: #ffffff;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        
+        padding: 14px 16px;
+        border-radius: 14px;
+        font-size: 1.05rem;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        font-family: inherit;
+        position: relative;
+        overflow: hidden;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+
+    .option-btn:hover:not(:disabled) {
+        background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px -5px rgba(79, 70, 229, 0.4);
+        border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .option-btn.correct {
+        background: linear-gradient(135deg, #34d399 0%, #059669 100%); /* Emerald Gradient */
+        border-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+        color: white;
+    }
+
+    .option-btn.incorrect {
+        background: linear-gradient(135deg, #fb7185 0%, #e11d48 100%); /* Rose Gradient */
+        border-color: rgba(255, 255, 255, 0.5);
+        color: white;
+        opacity: 0.9;
+    }
+
+    .option-btn:disabled {
+        cursor: default;
+        transform: none !important;
+    }
+
+    /* Feedback Area */
+    #feedback-container {
+        min-height: 50px;
+        margin-top: 15px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(241, 245, 249, 0.5);
+        border-radius: 12px;
+        padding: 8px;
+    }
+
+    #next-btn {
+        margin-top: 15px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* End Screen */
+    #end-screen h2 {
+        font-size: 1.8rem;
+        color: var(--text-main);
+    }
+
+    #final-score {
+        font-size: 3.5rem;
+        font-weight: 800;
+        background: linear-gradient(to bottom right, var(--primary-accent), #c084fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 5px 0;
+        line-height: 1;
+    }
+
+    #end-comment {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+
+    /* Revision List */
+    #revision-container {
+        margin-top: 30px;
+        text-align: left;
+        max-height: 350px;
+        overflow-y: auto;
+        border-top: 1px solid rgba(0,0,0,0.06);
+        padding: 20px 10px 10px 10px;
+    }
+
+    #revision-container h3 {
+        margin-top: 0;
+        color: var(--text-main);
+        font-weight: 600;
+    }
+
+    #revision-list .revision-item {
+        background-color: white;
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        border-left: 4px solid var(--primary-accent);
+        transition: background-color 0.2s;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        border: 1px solid #f1f5f9;
+    }
+
+    #revision-list .revision-item:hover {
+        background-color: #f8fafc;
+    }
+
+    #revision-list .revision-item p {
+        margin: 0 0 6px 0;
+        line-height: 1.4;
+    }
+
+    #revision-list .revision-item .word-info {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--primary-accent);
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    #revision-list .revision-item .word-info span {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        font-weight: 400;
+    }
+
+    #revision-list .revision-item .sentence-info {
+        color: var(--text-main);
+        font-style: italic;
+        opacity: 0.9;
+        font-size: 0.95rem;
+    }
+
+    #revision-list .revision-item .sentence-info strong {
+        color: var(--correct-color);
+        font-style: normal;
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: rgba(5, 150, 105, 0.4);
+        text-underline-offset: 4px;
+    }
+
+    footer {
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(0,0,0,0.06);
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    /* Tablet and Mobile Responsiveness - UPDATED */
+    @media (max-width: 1366px) {
+        body {
+            align-items: flex-start; 
+            padding: 20px;
+            padding-top: max(30px, env(safe-area-inset-top)); 
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+        }
+        
+        .app-container {
+            padding: 20px;
+            border-radius: 20px; 
+            min-height: auto; 
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.92);
+            margin: 0 auto 20px auto;
+        }
+
+        /* Compact Header */
+        header {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            flex-shrink: 0;
+        }
+        header h1 {
+            font-size: 0.75rem;
+            margin-bottom: 2px;
+        }
+        header h2 {
+            font-size: 1.4rem;
+            margin: 2px 0;
+        }
+        header p {
+            font-size: 0.85rem;
+        }
+        
+        /* Compact Quiz Header */
+        #quiz-screen .quiz-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 5px 10px;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+        }
+
+        #question-counter {
+            grid-column: 1;
+            grid-row: 1;
+            text-align: left;
+            font-size: 0.8rem;
+        }
+
+        #score-counter {
+            grid-column: 2;
+            grid-row: 1;
+            text-align: right;
+            font-size: 0.8rem;
+        }
+
+        #return-btn {
+            grid-column: 1 / -1;
+            grid-row: 2;
+            width: 100%;
+            margin-top: 2px;
+            padding: 6px;
+            font-size: 0.8rem;
+        }
+
+        /* Compact Question Text */
+        #question-text {
+            font-size: 1.15rem;
+            line-height: 1.4;
+            margin: 0 0 15px 0;
+            min-height: auto;
+            flex-grow: 0;
+        }
+        
+        .blank {
+            width: 80px;
+            border-bottom-width: 1px;
+        }
+        
+        /* Compact Options Grid */
+        #options-container {
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .option-btn {
+            padding: 12px;
+            font-size: 0.95rem;
+            border-radius: 10px;
+        }
+        
+        /* Compact Feedback & Footer */
+        #feedback-container {
+            min-height: 40px;
+            margin-top: 10px;
+            padding: 8px;
+            font-size: 0.9rem;
+        }
+
+        #next-btn {
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .question-count-options .btn {
+            padding: 10px 20px;
+            flex: 1 1 30%;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 10px;
+            font-size: 0.7rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <h1>K S Lo English</h1>
+        <h2>Cambridge C2 Proficiency<br>Revision Exercise</h2>
+        <p>Words 1 (abrupt) - 804 (xenophobia)</p>
+    </header>
+
+    <main>
+        <div id="start-screen">
+            <h3>How many questions would you like to attempt?</h3>
+            <div class="question-count-options">
+                <button class="btn" onclick="startGame(10)">10</button>
+                <button class="btn" onclick="startGame(20)">20</button>
+                <button class="btn" onclick="startGame(30)">30</button>
+                <button class="btn" onclick="startGame(40)">40</button>
+                <button class="btn" onclick="startGame(50)">50</button>
+                <button class="btn" onclick="startGame(100)">100</button>
+            </div>
+        </div>
+
+        <div id="quiz-screen">
+            <div class="quiz-header">
+                <div id="question-counter"></div>
+                <div id="score-counter"></div>
+                <button id="return-btn" class="btn">Return to Title</button>
+            </div>
+            <p id="question-text"></p>
+            <div id="options-container"></div>
+            <div id="feedback-container"></div>
+            <button id="next-btn" class="btn" style="display: none;">Next Question</button>
+        </div>
+
+        <div id="end-screen">
+            <h2>Quiz Complete!</h2>
+            <p>You scored:</p>
+            <div id="final-score"></div>
+            <p id="end-comment"></p>
+            <button id="restart-btn" class="btn">Start Again</button>
+            <div id="revision-container" style="display: none;">
+                <h3>Review Your Answers</h3>
+                <div id="revision-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © <span id="copyright-year"></span> K S Lo English. All Rights Reserved.
+    </footer>
+</div>
+
+<script>
+    // Data from CSV (491-980)
+    const questionBank = [
+{id: 1, word: "abrupt", baseForm: "abrupt", pos: "adj", definition_ch: "突然的；意外的", sentence: "Our conversation came to a/an _______ end when George burst into the room."},
+{id: 2, word: "abruptly", baseForm: "abruptly", pos: "adv", definition_ch: "突然地；出人意料地", sentence: "She left the meeting _______ without giving any explanation."},
+{id: 3, word: "abusive", baseForm: "abusive", pos: "adj", definition_ch: "虐待的；辱罵的", sentence: "She left the _______ relationship to protect her mental health."},
+{id: 4, word: "affectionate", baseForm: "affectionate", pos: "adj", definition_ch: "充滿深情的；表示愛意的", sentence: "She gave her dog a/an _______ hug before leaving."},
+{id: 5, word: "alcoholic", baseForm: "alcoholic", pos: "n", definition_ch: "酒鬼；酗酒者", sentence: "The _______ sought help to overcome his drinking problem."},
+{id: 6, word: "allied", baseForm: "allied", pos: "adj", definition_ch: "結盟的；聯合的", sentence: "The _______ countries worked together to solve global problems."},
+{id: 7, word: "ambiguity", baseForm: "ambiguity", pos: "n", definition_ch: "模糊不清；含糊其詞", sentence: "The _______ in his answer confused everyone in the meeting."},
+{id: 8, word: "ambiguous", baseForm: "ambiguous", pos: "adj", definition_ch: "含糊不清的；模稜兩可的", sentence: "The instructions were _______, causing confusion among the students."},
+{id: 9, word: "analogous", baseForm: "analogous", pos: "adj", definition_ch: "類似的；相似的", sentence: "The human brain is _______ to a complex computer system."},
+{id: 10, word: "anchor", baseForm: "anchor", pos: "v", definition_ch: "拋錨；固定", sentence: "The ship will _______ near the coast before sunset today."},
+{id: 11, word: "animated", baseForm: "animated", pos: "adj", definition_ch: "生氣勃勃的；活潑的", sentence: "The _______ discussion showed everyone’s strong opinions clearly."},
+{id: 12, word: "antibiotic", baseForm: "antibiotic", pos: "n", definition_ch: "抗生素", sentence: "The doctor prescribed a/an _______ to treat the bacterial infection."},
+{id: 13, word: "anticipation", baseForm: "anticipation", pos: "n", definition_ch: "期待；預期", sentence: "She waited in _______ for the results of her exam."},
+{id: 14, word: "apologetic", baseForm: "apologetic", pos: "adj", definition_ch: "表示歉意的；道歉的", sentence: "She sounded _______ after accidentally breaking the vase yesterday."},
+{id: 15, word: "appalling", baseForm: "appalling", pos: "adj", definition_ch: "令人震驚且極其糟糕的", sentence: "The _______ conditions in the shelter shocked all the visitors."},
+{id: 16, word: "arch", baseForm: "arch", pos: "n", definition_ch: "拱形結構；拱門", sentence: "The ancient stone _______ stood firmly over the narrow street."},
+{id: 17, word: "arch", baseForm: "arch", pos: "v", definition_ch: "使成拱形；形成拱形", sentence: "The cat arched its back when it felt threatened."},
+{id: 18, word: "arid", baseForm: "arid", pos: "adj", definition_ch: "乾燥的；缺乏水分的", sentence: "The desert is _______ and receives very little rainfall yearly."},
+{id: 19, word: "arouse", baseForm: "arouse", pos: "v", definition_ch: "喚起；激發", sentence: "The loud noise can _______ fear in small children easily."},
+{id: 20, word: "artificial intelligence", baseForm: "artificial intelligence", pos: "n", definition_ch: "人工智慧", sentence: "_______ helps computers learn from data and improve performance."},
+{id: 21, word: "assertive", baseForm: "assertive", pos: "adj", definition_ch: "堅定自信的；果斷的", sentence: "She was _______ during the meeting and shared her ideas clearly."},
+{id: 22, word: "astronomy", baseForm: "astronomy", pos: "n", definition_ch: "天文學", sentence: "She developed a strong interest in _______ during high school."},
+{id: 23, word: "attainable", baseForm: "attainable", pos: "adj", definition_ch: "可達成的；可實現的", sentence: "Setting _______ goals helps you stay motivated and focused."},
+{id: 24, word: "avenue", baseForm: "avenue", pos: "n", definition_ch: "大道；林蔭大道", sentence: "We walked down the _______ lined with tall green trees."},
+{id: 25, word: "awe", baseForm: "awe", pos: "n", definition_ch: "敬畏；驚嘆", sentence: "She felt a deep _______ when visiting the ancient temple."},
+{id: 26, word: "awesome", baseForm: "awesome", pos: "adj", definition_ch: "令人敬畏的；極好的", sentence: "The view from the mountain was truly _______ and unforgettable."},
+{id: 27, word: "backward", baseForm: "backward", pos: "adj", definition_ch: "向後的；落後的", sentence: "She took a step _______ to avoid the oncoming crowd."},
+{id: 28, word: "baggage", baseForm: "baggage", pos: "n", definition_ch: "行李；旅行時攜帶的包裹", sentence: "She carried her _______ carefully through the busy airport terminal."},
+{id: 29, word: "balcony", baseForm: "balcony", pos: "n", definition_ch: "陽臺；突出平台", sentence: "She enjoyed reading books on the _______ every morning."},
+{id: 30, word: "bark", baseForm: "bark", pos: "n", definition_ch: "樹皮，包覆樹幹的外層", sentence: "The tree's _______ was rough and cracked after the dry summer."},
+{id: 31, word: "bark", baseForm: "bark", pos: "v", definition_ch: "狗吠；（動物）吠叫", sentence: "The dog will _______ loudly when strangers come near the house."},
+{id: 32, word: "barn", baseForm: "barn", pos: "n", definition_ch: "穀倉；畜舍", sentence: "The farmer stored hay and tools safely inside the _______."},
+{id: 33, word: "blackmail", baseForm: "blackmail", pos: "n", definition_ch: "勒索；威脅索賄", sentence: "He was arrested for attempting to _______ his former boss."},
+{id: 34, word: "blackmail", baseForm: "blackmail", pos: "v", definition_ch: "勒索；威脅索取", sentence: "She tried to _______ him with secrets he wanted to keep private."},
+{id: 35, word: "bland", baseForm: "bland", pos: "adj", definition_ch: "平淡無味的；乏味的", sentence: "The soup tasted _______ because it lacked enough salt and spices."},
+{id: 36, word: "bleak", baseForm: "bleak", pos: "adj", definition_ch: "陰冷的；淒涼的；無希望的", sentence: "The landscape looked _______ after the long winter storm passed."},
+{id: 37, word: "blindness", baseForm: "blindness", pos: "n", definition_ch: "失明；看不見的狀態", sentence: "_______ can greatly affect a person's daily life activities."},
+{id: 38, word: "blister", baseForm: "blister", pos: "n", definition_ch: "水泡；皮膚起泡", sentence: "She got a/an _______ on her foot after wearing new shoes all day."},
+{id: 39, word: "bloody", baseForm: "bloody", pos: "adj", definition_ch: "滿是血的；流血的", sentence: "The soldier returned home with a/an _______ bandage on his arm."},
+{id: 40, word: "blunt", baseForm: "blunt", pos: "adj", definition_ch: "鈍的；不鋒利的", sentence: "The knife is _______ and cannot cut the vegetables properly."},
+{id: 41, word: "bomber", baseForm: "bomber", pos: "n", definition_ch: "轟炸機；投擲炸彈的人", sentence: "The _______ flew over the city during the military exercise."},
+{id: 42, word: "bond", baseForm: "bond", pos: "v", definition_ch: "建立情感或關係的連結", sentence: "The shared experience helped them _______ quickly as friends."},
+{id: 43, word: "brass", baseForm: "brass", pos: "n", definition_ch: "黃銅合金", sentence: "The statue was made of _______ and shone brightly in sunlight."},
+{id: 44, word: "bribery", baseForm: "bribery", pos: "n", definition_ch: "賄賂行為", sentence: "The politician was accused of _______ during the election campaign."},
+{id: 45, word: "broadminded", baseForm: "broadminded", pos: "adj", definition_ch: "思想開放；包容多元", sentence: "She is very _______ and respects others' opinions."},
+{id: 46, word: "bronze", baseForm: "bronze", pos: "adj", definition_ch: "銅製的；青銅色的", sentence: "She wore a beautiful _______ necklace to the party last night."},
+{id: 47, word: "bronze", baseForm: "bronze", pos: "n", definition_ch: "銅製合金；青銅", sentence: "The statue was made of _______ and stood in the park."},
+{id: 48, word: "bubble", baseForm: "bubble", pos: "v", definition_ch: "冒泡；起泡沫", sentence: "Water will _______ when it reaches boiling temperature quickly."},
+{id: 49, word: "bundle", baseForm: "bundle", pos: "n", definition_ch: "一捆；一束；一包", sentence: "She carried a/an _______ of newspapers to the recycling center."},
+{id: 50, word: "buzz", baseForm: "buzz", pos: "n", definition_ch: "嗡嗡聲；持續的低沉聲", sentence: "I heard a/an _______ coming from the old refrigerator last night."},
+{id: 51, word: "buzz", baseForm: "buzz", pos: "v", definition_ch: "發出嗡嗡聲", sentence: "The bees _______ around the flowers in the warm garden."},
+{id: 52, word: "calf", baseForm: "calf", pos: "n", definition_ch: "小牛；牛犢", sentence: "The farmer took care of the _______ during the cold winter days."},
+{id: 53, word: "carefree", baseForm: "carefree", pos: "adj", definition_ch: "無憂無慮的；無掛慮的", sentence: "She enjoyed a/an _______ afternoon without any worries or stress."},
+{id: 54, word: "casserole", baseForm: "casserole", pos: "n", definition_ch: "砂鍋焗菜", sentence: "She prepared a delicious chicken _______ for dinner tonight."},
+{id: 55, word: "catastrophe", baseForm: "catastrophe", pos: "n", definition_ch: "大災難；嚴重災害", sentence: "The earthquake was a terrible _______ that affected many people."},
+{id: 56, word: "caution", baseForm: "caution", pos: "v", definition_ch: "小心；警告", sentence: "You should always _______ others when the road is slippery."},
+{id: 57, word: "chancellor", baseForm: "chancellor", pos: "n", definition_ch: "大學校長；政府官員", sentence: "The _______ announced new policies to improve the economy."},
+{id: 58, word: "channel", baseForm: "channel", pos: "v", definition_ch: "引導；傳送", sentence: "They _______ their creativity into designing innovative products."},
+{id: 59, word: "chapel", baseForm: "chapel", pos: "n", definition_ch: "小教堂；禮拜堂", sentence: "The wedding ceremony was held in a beautiful old _______ nearby."},
+{id: 60, word: "charisma", baseForm: "charisma", pos: "n", definition_ch: "魅力；感召力", sentence: "Her natural _______ made everyone want to follow her lead."},
+{id: 61, word: "charismatic", baseForm: "charismatic", pos: "adj", definition_ch: "有魅力的；有感召力的", sentence: "The _______ leader inspired everyone to work towards a common goal."},
+{id: 62, word: "charm", baseForm: "charm", pos: "v", definition_ch: "使著迷；使陶醉", sentence: "She tried to _______ the audience with her friendly smile."},
+{id: 63, word: "cheerfulness", baseForm: "cheerfulness", pos: "n", definition_ch: "愉快、快樂的心情或狀態", sentence: "Her _______ always brightens up the office on Mondays."},
+{id: 64, word: "chill", baseForm: "chill", pos: "n", definition_ch: "寒意；冷氣", sentence: "There is a/an _______ in the air as autumn approaches quickly."},
+{id: 65, word: "circular", baseForm: "circular", pos: "adj", definition_ch: "圓形的；環狀的", sentence: "The children sat in a/an _______ formation during story time."},
+{id: 66, word: "clash", baseForm: "clash", pos: "v", definition_ch: "發生衝突或碰撞", sentence: "The two teams _______ every year in a highly anticipated match."},
+{id: 67, word: "cliche", baseForm: "cliche", pos: "n", definition_ch: "陳腔濫調；老生常談", sentence: "Using a/an _______ in writing can make your story less original."},
+{id: 68, word: "cliched", baseForm: "cliched", pos: "adj", definition_ch: "陳腐的；老套的", sentence: "The movie was boring because the plot was too _______."},
+{id: 69, word: "cloud", baseForm: "cloud", pos: "v", definition_ch: "使變模糊；使陰鬱", sentence: "Dark thoughts _______ his mind during difficult times."},
+{id: 70, word: "clumsiness", baseForm: "clumsiness", pos: "n", definition_ch: "笨拙；動作不靈巧", sentence: "Her _______ caused her to drop the fragile glass vase."},
+{id: 71, word: "clutch", baseForm: "clutch", pos: "v", definition_ch: "緊握；抓住", sentence: "She tried to _______ the rope tightly during the climb."},
+{id: 72, word: "coastline", baseForm: "coastline", pos: "n", definition_ch: "海岸線", sentence: "The _______ stretches for miles along the beautiful ocean view."},
+{id: 73, word: "coherence", baseForm: "coherence", pos: "n", definition_ch: "連貫性；一致性", sentence: "The _______ of her argument made the essay very convincing."},
+{id: 74, word: "coherent", baseForm: "coherent", pos: "adj", definition_ch: "前後一致的；有條理的", sentence: "She gave a/an _______ explanation that everyone could understand easily."},
+{id: 75, word: "coin", baseForm: "coin", pos: "v", definition_ch: "創造新詞語或片語", sentence: "The author coined a new term to describe the phenomenon."},
+{id: 76, word: "coldness", baseForm: "coldness", pos: "n", definition_ch: "寒冷；冷淡的態度或情感", sentence: "Her _______ made it difficult to have a friendly conversation."},
+{id: 77, word: "colour", baseForm: "colour", pos: "v", definition_ch: "給…著色；給…染色", sentence: "She used bright paint to _______ the old wooden fence."},
+{id: 78, word: "comeback", baseForm: "comeback", pos: "n", definition_ch: "東山再起；復甦", sentence: "After many years, the singer made a surprising _______ last year."},
+{id: 79, word: "comforting", baseForm: "comforting", pos: "adj", definition_ch: "令人感到安慰的；慰藉的", sentence: "Her kind words were very _______ during my difficult time."},
+{id: 80, word: "commemorate", baseForm: "commemorate", pos: "v", definition_ch: "紀念；緬懷", sentence: "We gather every year to _______ those who served bravely."},
+{id: 81, word: "committed", baseForm: "committed", pos: "adj", definition_ch: "忠誠的；投入的", sentence: "She is _______ to improving her skills every single day."},
+{id: 82, word: "compatible", baseForm: "compatible", pos: "adj", definition_ch: "相容的；可共存的", sentence: "These software programs are _______ with both Windows and Mac systems."},
+{id: 83, word: "complexion", baseForm: "complexion", pos: "n", definition_ch: "膚色；面色", sentence: "She has a fair _______ that glows in the sunlight."},
+{id: 84, word: "compliment", baseForm: "compliment", pos: "n", definition_ch: "讚美；恭維的話", sentence: "She received a/an _______ on her presentation from the manager."},
+{id: 85, word: "complimentary", baseForm: "complimentary", pos: "adj", definition_ch: "免費贈送的；表示讚美的", sentence: "The hotel offers _______ breakfast to all its guests."},
+{id: 86, word: "compulsive", baseForm: "compulsive", pos: "adj", definition_ch: "強迫性的；無法控制的", sentence: "She has a/an _______ habit of checking her phone constantly."},
+{id: 87, word: "conceited", baseForm: "conceited", pos: "adj", definition_ch: "自負的；自以為是的", sentence: "He became _______ after winning the competition easily."},
+{id: 88, word: "conclusive", baseForm: "conclusive", pos: "adj", definition_ch: "決定性的；確鑿的", sentence: "The evidence provided was _______ and left no room for doubt."},
+{id: 89, word: "conclusively", baseForm: "conclusively", pos: "adv", definition_ch: "確鑿地；無疑地", sentence: "The evidence _______ proved her innocence beyond doubt."},
+{id: 90, word: "condition", baseForm: "condition", pos: "v", definition_ch: "使處於特定狀態", sentence: "The mechanic will _______ the engine before the long trip."},
+{id: 91, word: "constrain", baseForm: "constrain", pos: "v", definition_ch: "限制，約束", sentence: "The tight schedule may _______ our ability to finish early."},
+{id: 92, word: "continental", baseForm: "continental", pos: "adj", definition_ch: "大陸的；大陸性的", sentence: "The _______ climate causes hot summers and cold winters in this region."},
+{id: 93, word: "continuity", baseForm: "continuity", pos: "n", definition_ch: "連續性；持續不斷的狀態", sentence: "The _______ of the story helped the audience understand it clearly."},
+{id: 94, word: "contraception", baseForm: "contraception", pos: "n", definition_ch: "避孕措施", sentence: "Many couples use _______ to plan their families responsibly."},
+{id: 95, word: "contraceptive", baseForm: "contraceptive", pos: "n", definition_ch: "避孕藥；避孕用具", sentence: "Many couples use a/an _______ to prevent unintended pregnancy."},
+{id: 96, word: "contradict", baseForm: "contradict", pos: "v", definition_ch: "與⋯⋯相矛盾；反駁", sentence: "Her statement contradicts the facts we gathered yesterday."},
+{id: 97, word: "contradictory", baseForm: "contradictory", pos: "adj", definition_ch: "矛盾的；相互抵觸的", sentence: "Her statements were _______ and confused everyone in the meeting."},
+{id: 98, word: "cookie", baseForm: "cookie", pos: "n", definition_ch: "餅乾；小甜點", sentence: "She offered me a chocolate chip _______ with my tea."},
+{id: 99, word: "coolness", baseForm: "coolness", pos: "n", definition_ch: "涼爽；冷靜的狀態或特質", sentence: "Her _______ during the crisis impressed everyone around her."},
+{id: 100, word: "coral", baseForm: "coral", pos: "n", definition_ch: "珊瑚；珊瑚骨骼", sentence: "The _______ reef is home to many colorful fish and sea creatures."},
+{id: 101, word: "corpse", baseForm: "corpse", pos: "n", definition_ch: "屍體，死去的人的身體", sentence: "The police found the _______ hidden in the abandoned house."},
+{id: 102, word: "courteous", baseForm: "courteous", pos: "adj", definition_ch: "有禮貌的；彬彬有禮的", sentence: "The _______ waiter always greeted customers with a warm smile."},
+{id: 103, word: "crackdown", baseForm: "crackdown", pos: "n", definition_ch: "嚴厲取締；鎮壓", sentence: "The government announced a/an _______ on illegal street vendors yesterday."},
+{id: 104, word: "crave", baseForm: "crave", pos: "v", definition_ch: "渴望；非常想要", sentence: "Many people _______ attention and approval from others."},
+{id: 105, word: "craving", baseForm: "craving", pos: "n", definition_ch: "渴望；強烈的欲望", sentence: "She had a/an _______ for chocolate after a long day at work."},
+{id: 106, word: "craziness", baseForm: "craziness", pos: "n", definition_ch: "瘋狂；失去理智的狀態", sentence: "The _______ of the situation made everyone feel uneasy."},
+{id: 107, word: "creep", baseForm: "creep", pos: "n", definition_ch: "令人不舒服的人；怪胎", sentence: "That guy is such a/an _______, always staring at people."},
+{id: 108, word: "cricket", baseForm: "cricket", pos: "n", definition_ch: "蟋蟀，一種會鳴叫的昆蟲", sentence: "We heard the _______ chirping loudly in the dark garden."},
+{id: 109, word: "crisp", baseForm: "crisp", pos: "adj", definition_ch: "清脆；酥脆；俐落", sentence: "The _______ autumn air made our morning walk refreshing and pleasant."},
+{id: 110, word: "crumble", baseForm: "crumble", pos: "v", definition_ch: "（使）崩解；（使）破碎", sentence: "The old walls began to _______ after years of neglect."},
+{id: 111, word: "crush", baseForm: "crush", pos: "n", definition_ch: "迷戀；暗戀", sentence: "She had a huge _______ on her classmate since last year."},
+{id: 112, word: "cunning", baseForm: "cunning", pos: "adj", definition_ch: "狡猾的；奸詐的", sentence: "The _______ fox cleverly escaped from the hunter's trap."},
+{id: 113, word: "curb", baseForm: "curb", pos: "v", definition_ch: "控制；抑制", sentence: "The government introduced new laws to _______ pollution effectively."},
+{id: 114, word: "cushion", baseForm: "cushion", pos: "n", definition_ch: "墊子；軟墊", sentence: "She placed a/an _______ on the chair for extra comfort."},
+{id: 115, word: "cutlery", baseForm: "cutlery", pos: "n", definition_ch: "餐具；刀叉匙", sentence: "Please set the table with _______ before the guests arrive."},
+{id: 116, word: "dash", baseForm: "dash", pos: "n", definition_ch: "短跑；衝刺", sentence: "He made a quick _______ to catch the last bus home."},
+{id: 117, word: "dated", baseForm: "dated", pos: "adj", definition_ch: "過時的；陳舊的", sentence: "The design looked _______ compared to modern styles today."},
+{id: 118, word: "dazed", baseForm: "dazed", pos: "adj", definition_ch: "茫然的；迷糊的", sentence: "After the accident, she stood there looking _______ and confused."},
+{id: 119, word: "dazzle", baseForm: "dazzle", pos: "v", definition_ch: "使目眩；使眼花繚亂", sentence: "The bright lights of the city can _______ visitors at night."},
+{id: 120, word: "dazzling", baseForm: "dazzling", pos: "adj", definition_ch: "令人目眩神迷的；耀眼的", sentence: "She wore a/an _______ dress that caught everyone's attention."},
+{id: 121, word: "decaffeinated", baseForm: "decaffeinated", pos: "adj", definition_ch: "去除咖啡因的", sentence: "She prefers _______ coffee to avoid feeling restless at night."},
+{id: 122, word: "decay", baseForm: "decay", pos: "n", definition_ch: "腐敗；衰敗；蛀牙", sentence: "The _______ of the old building was evident after many years."},
+{id: 123, word: "deceased", baseForm: "deceased", pos: "adj", definition_ch: "已故的；去世的", sentence: "The _______ man was remembered fondly by his family and friends."},
+{id: 124, word: "deception", baseForm: "deception", pos: "n", definition_ch: "欺騙；詐欺；蒙蔽", sentence: "The magician’s _______ fooled everyone in the audience easily."},
+{id: 125, word: "deceptive", baseForm: "deceptive", pos: "adj", definition_ch: "具有欺騙性的；迷惑人的", sentence: "The magician's _______ tricks fooled the entire audience easily."},
+{id: 126, word: "decisively", baseForm: "decisively", pos: "adv", definition_ch: "果斷地；決定性地", sentence: "She acted _______ to solve the problem quickly."},
+{id: 127, word: "deduce", baseForm: "deduce", pos: "v", definition_ch: "推論；演繹出", sentence: "From the clues, we can _______ who committed the crime."},
+{id: 128, word: "deduction", baseForm: "deduction", pos: "n", definition_ch: "推論；推理過程", sentence: "Her _______ from the clues helped solve the mystery quickly."},
+{id: 129, word: "deepen", baseForm: "deepen", pos: "v", definition_ch: "使變深；加深", sentence: "The experience helped _______ her understanding of the subject."},
+{id: 130, word: "defective", baseForm: "defective", pos: "adj", definition_ch: "有缺陷的；有瑕疵的", sentence: "The company recalled the _______ products to ensure customer safety."},
+{id: 131, word: "definitive", baseForm: "definitive", pos: "adj", definition_ch: "最終的；確定的；權威的", sentence: "This book is considered the _______ guide to modern cooking."},
+{id: 132, word: "delegate", baseForm: "delegate", pos: "v", definition_ch: "委派；授權", sentence: "You should _______ tasks to your team to improve efficiency."},
+{id: 133, word: "demolish", baseForm: "demolish", pos: "v", definition_ch: "拆除，破壞建築物或結構", sentence: "They plan to _______ the old building next week."},
+{id: 134, word: "deprivation", baseForm: "deprivation", pos: "n", definition_ch: "剝奪；缺乏", sentence: "Sleep _______ can negatively affect your mental and physical health."},
+{id: 135, word: "descendant", baseForm: "descendant", pos: "n", definition_ch: "後代，子孫", sentence: "She is a direct _______ of the famous historical figure."},
+{id: 136, word: "desperation", baseForm: "desperation", pos: "n", definition_ch: "絕望；孤注一擲", sentence: "In _______, she called for help despite the late hour."},
+{id: 137, word: "detached", baseForm: "detached", pos: "adj", definition_ch: "分離的；超然的；冷漠的", sentence: "She remained _______ during the emotional family discussion yesterday."},
+{id: 138, word: "deterrent", baseForm: "deterrent", pos: "n", definition_ch: "威懾物；威嚇手段", sentence: "The security cameras act as a strong _______ against theft."},
+{id: 139, word: "detrimental", baseForm: "detrimental", pos: "adj", definition_ch: "有害的；不利的", sentence: "Smoking has a/an _______ effect on your overall health."},
+{id: 140, word: "devastating", baseForm: "devastating", pos: "adj", definition_ch: "毀滅性的；極具破壞力的", sentence: "The earthquake caused _______ damage to the entire city."},
+{id: 141, word: "devastation", baseForm: "devastation", pos: "n", definition_ch: "毀滅；破壞", sentence: "The earthquake caused widespread _______ across the entire city."},
+{id: 142, word: "developer", baseForm: "developer", pos: "n", definition_ch: "開發者；開發人員", sentence: "The _______ fixed the software bugs before the launch date."},
+{id: 143, word: "dialect", baseForm: "dialect", pos: "n", definition_ch: "方言；土語", sentence: "She speaks a/an _______ that is unique to her hometown."},
+{id: 144, word: "diarrhoea", baseForm: "diarrhoea", pos: "n", definition_ch: "腹瀉", sentence: "She experienced _______ after eating the contaminated food yesterday."},
+{id: 145, word: "dice", baseForm: "dice", pos: "n", definition_ch: "骰子；賭具", sentence: "She rolled the _______ and hoped for a lucky number."},
+{id: 146, word: "dice", baseForm: "dice", pos: "v", definition_ch: "將食物切成小方塊", sentence: "Please _______ the onions before adding them to the soup."},
+{id: 147, word: "dignified", baseForm: "dignified", pos: "adj", definition_ch: "有尊嚴的；莊重的", sentence: "She gave a/an _______ speech at the important ceremony today."},
+{id: 148, word: "dim", baseForm: "dim", pos: "adj", definition_ch: "光線昏暗的；不明亮的", sentence: "The room was _______ because the old lamp was not very bright."},
+{id: 149, word: "dim", baseForm: "dim", pos: "v", definition_ch: "使變暗；減弱光線或亮度", sentence: "The lights _______ slowly as the movie begins to play."},
+{id: 150, word: "diplomacy", baseForm: "diplomacy", pos: "n", definition_ch: "外交手段", sentence: "Successful _______ requires patience and understanding between countries."},
+{id: 151, word: "diplomatically", baseForm: "diplomatically", pos: "adv", definition_ch: "外交手腕地；圓滑地", sentence: "She _______ resolved the conflict between her two friends."},
+{id: 152, word: "discomfort", baseForm: "discomfort", pos: "n", definition_ch: "不適；不舒服的感覺", sentence: "She felt slight _______ after sitting in the cold for hours."},
+{id: 153, word: "discreet", baseForm: "discreet", pos: "adj", definition_ch: "謹慎的；不顯眼的", sentence: "She was very _______ when discussing the confidential project details."},
+{id: 154, word: "discriminate", baseForm: "discriminate", pos: "v", definition_ch: "歧視；區別對待", sentence: "It is wrong to _______ against people based on their race."},
+{id: 155, word: "disguise", baseForm: "disguise", pos: "v", definition_ch: "偽裝；掩飾身份或外貌", sentence: "She wore a hat to _______ herself in the crowded market."},
+{id: 156, word: "disgust", baseForm: "disgust", pos: "n", definition_ch: "厭惡；反感", sentence: "She felt _______ at the dirty and messy kitchen."},
+{id: 157, word: "disillusioned", baseForm: "disillusioned", pos: "adj", definition_ch: "感到失望或幻想破滅的", sentence: "She felt _______ after realizing the job was not as promised."},
+{id: 158, word: "disloyal", baseForm: "disloyal", pos: "adj", definition_ch: "不忠誠的；背叛的", sentence: "He was fired for being _______ to the company and its values."},
+{id: 159, word: "dismay", baseForm: "dismay", pos: "n", definition_ch: "沮喪；失望；驚慌", sentence: "She felt deep _______ after hearing the unexpected bad news."},
+{id: 160, word: "disposable", baseForm: "disposable", pos: "adj", definition_ch: "可丟棄的；一次性的", sentence: "Please use _______ plates for the picnic to avoid washing dishes."},
+{id: 161, word: "disposable income", baseForm: "disposable income", pos: "n", definition_ch: "可支配收入", sentence: "Many families use their _______ for leisure activities and savings."},
+{id: 162, word: "disposition", baseForm: "disposition", pos: "n", definition_ch: "性情；性格；傾向", sentence: "She has a cheerful _______ that brightens the room."},
+{id: 163, word: "disqualify", baseForm: "disqualify", pos: "v", definition_ch: "使失去資格或資格不符", sentence: "The player was disqualified for breaking the competition rules."},
+{id: 164, word: "disrespectful", baseForm: "disrespectful", pos: "adj", definition_ch: "不尊重人的；無禮的", sentence: "It is _______ to interrupt someone while they are speaking."},
+{id: 165, word: "disruptive", baseForm: "disruptive", pos: "adj", definition_ch: "造成混亂或中斷的", sentence: "The student's _______ behavior interrupted the entire class session."},
+{id: 166, word: "disturbance", baseForm: "disturbance", pos: "n", definition_ch: "干擾；騷亂", sentence: "The loud noise caused a/an _______ during the quiet meeting."},
+{id: 167, word: "disturbed", baseForm: "disturbed", pos: "adj", definition_ch: "感到不安或心神不寧的", sentence: "She looked _______ after hearing the shocking news yesterday."},
+{id: 168, word: "dna", baseForm: "dna", pos: "n", definition_ch: "脫氧核糖核酸", sentence: "Scientists study _______ to understand how traits are inherited."},
+{id: 169, word: "doom", baseForm: "doom", pos: "n", definition_ch: "厄運；災難性的命運", sentence: "The ancient prophecy foretold the _______ of the lost kingdom."},
+{id: 170, word: "doorway", baseForm: "doorway", pos: "n", definition_ch: "門口；門道", sentence: "She stood in the _______, waiting for someone to arrive."},
+{id: 171, word: "downhill", baseForm: "downhill", pos: "adv", definition_ch: "往下坡的；向下的", sentence: "The cyclist sped _______ carefully to avoid any accidents."},
+{id: 172, word: "drain", baseForm: "drain", pos: "n", definition_ch: "排水管；排水溝", sentence: "Be careful not to block the _______ in the kitchen sink."},
+{id: 173, word: "dread", baseForm: "dread", pos: "v", definition_ch: "害怕；恐懼", sentence: "She began to _______ the upcoming exam because it seemed very difficult."},
+{id: 174, word: "dubious", baseForm: "dubious", pos: "adj", definition_ch: "可疑的；不確定的；懷疑的", sentence: "She gave a/an _______ answer that made everyone doubt her story."},
+{id: 175, word: "dump", baseForm: "dump", pos: "n", definition_ch: "垃圾場；廢棄物堆放處", sentence: "The old car was left at the _______ near the river."},
+{id: 176, word: "eccentric", baseForm: "eccentric", pos: "adj", definition_ch: "古怪的；反常的", sentence: "The _______ artist always wore colorful clothes and strange hats."},
+{id: 177, word: "elapse", baseForm: "elapse", pos: "v", definition_ch: "時間流逝；過去", sentence: "Several hours _______ before the train finally arrives here."},
+{id: 178, word: "elated", baseForm: "elated", pos: "adj", definition_ch: "欣喜若狂的；興高采烈的", sentence: "She was _______ after receiving the good news from her boss."},
+{id: 179, word: "elimination", baseForm: "elimination", pos: "n", definition_ch: "消除；排除", sentence: "The _______ of errors improved the quality of the project."},
+{id: 180, word: "elusive", baseForm: "elusive", pos: "adj", definition_ch: "難捉摸；難理解", sentence: "The solution to the problem remained _______ despite many attempts."},
+{id: 181, word: "embarrass", baseForm: "embarrass", pos: "v", definition_ch: "使尷尬；使難堪", sentence: "I did not want to _______ her in front of everyone."},
+{id: 182, word: "embrace", baseForm: "embrace", pos: "n", definition_ch: "擁抱", sentence: "Their warm _______ showed how much they cared for each other."},
+{id: 183, word: "eminent", baseForm: "eminent", pos: "adj", definition_ch: "傑出的；著名的；卓越的", sentence: "The _______ scientist received an award for her innovative research."},
+{id: 184, word: "emit", baseForm: "emit", pos: "v", definition_ch: "發出（光、熱、聲音等）", sentence: "The old factory continues to _______ smoke into the atmosphere daily."},
+{id: 185, word: "empathy", baseForm: "empathy", pos: "n", definition_ch: "同理心；感同身受", sentence: "Showing _______ helps us connect with others and build trust."},
+{id: 186, word: "endurance", baseForm: "endurance", pos: "n", definition_ch: "耐力；持久力", sentence: "Long-distance runners need great _______ to finish the race."},
+{id: 187, word: "engrossed", baseForm: "engrossed", pos: "adj", definition_ch: "全神貫注的；專心致志的", sentence: "She was so _______ in the book that she missed dinner."},
+{id: 188, word: "equate", baseForm: "equate", pos: "v", definition_ch: "等同；視為相等", sentence: "Many people _______ success with wealth and material possessions."},
+{id: 189, word: "eradicate", baseForm: "eradicate", pos: "v", definition_ch: "根除；消滅", sentence: "The government aims to _______ poverty within the next decade."},
+{id: 190, word: "erode", baseForm: "erode", pos: "v", definition_ch: "逐漸侵蝕或磨損", sentence: "Rain and wind can _______ the surface of the rocks over time."},
+{id: 191, word: "erosion", baseForm: "erosion", pos: "n", definition_ch: "侵蝕；風化", sentence: "The river caused significant _______ along the steep riverbank."},
+{id: 192, word: "eventful", baseForm: "eventful", pos: "adj", definition_ch: "多事的；充滿事件的", sentence: "The trip was _______ with many unexpected adventures and challenges."},
+{id: 193, word: "eventual", baseForm: "eventual", pos: "adj", definition_ch: "最終的；終於發生的", sentence: "The _______ outcome of the project was better than expected."},
+{id: 194, word: "excel", baseForm: "excel", pos: "v", definition_ch: "擅長；優於他人", sentence: "She always tries to _______ in her mathematics studies."},
+{id: 195, word: "exclaim", baseForm: "exclaim", pos: "v", definition_ch: "大聲喊叫；驚叫", sentence: "She couldn’t help but _______ when she saw the beautiful view."},
+{id: 196, word: "exemplify", baseForm: "exemplify", pos: "v", definition_ch: "作為典範或例子來說明", sentence: "This painting exemplifies the artist's unique style perfectly."},
+{id: 197, word: "expressive", baseForm: "expressive", pos: "adj", definition_ch: "富於表情的；有表現力的", sentence: "Her _______ eyes revealed deep emotions without any words."},
+{id: 198, word: "exquisite", baseForm: "exquisite", pos: "adj", definition_ch: "精緻的；極美的", sentence: "She wore a/an _______ necklace that caught everyone's attention."},
+{id: 199, word: "extravagant", baseForm: "extravagant", pos: "adj", definition_ch: "奢侈的；浪費的", sentence: "She threw a/an _______ party to celebrate her promotion."},
+{id: 200, word: "facial", baseForm: "facial", pos: "adj", definition_ch: "臉部的；面部的", sentence: "She went to the spa for a relaxing _______ treatment yesterday."},
+{id: 201, word: "faithful", baseForm: "faithful", pos: "adj", definition_ch: "忠實的；忠誠的", sentence: "She has always been _______ to her friends and family."},
+{id: 202, word: "fake", baseForm: "fake", pos: "n", definition_ch: "偽造品；假貨", sentence: "He bought a/an _______ watch that looked almost real."},
+{id: 203, word: "fake", baseForm: "fake", pos: "v", definition_ch: "偽造；假裝", sentence: "He tried to _______ a signature on the important document."},
+{id: 204, word: "famine", baseForm: "famine", pos: "n", definition_ch: "饑荒；糧食短缺", sentence: "Many people suffered during the long and severe _______ years."},
+{id: 205, word: "fanatic", baseForm: "fanatic", pos: "n", definition_ch: "狂熱者；盲目崇拜者", sentence: "She is a football _______ who never misses a game."},
+{id: 206, word: "faraway", baseForm: "faraway", pos: "adj", definition_ch: "遙遠的；遠方的", sentence: "She dreamed of visiting a/an _______ land full of adventure."},
+{id: 207, word: "faultless", baseForm: "faultless", pos: "adj", definition_ch: "無懈可擊的；完美無缺的", sentence: "Her _______ performance impressed everyone at the competition."},
+{id: 208, word: "fearful", baseForm: "fearful", pos: "adj", definition_ch: "害怕的；充滿恐懼的", sentence: "She felt _______ walking alone in the dark night."},
+{id: 209, word: "fearless", baseForm: "fearless", pos: "adj", definition_ch: "無所畏懼的；勇敢的", sentence: "The _______ firefighter entered the burning building to save lives."},
+{id: 210, word: "feeble", baseForm: "feeble", pos: "adj", definition_ch: "虛弱的；無力的", sentence: "The old man gave a/an _______ smile despite his pain."},
+{id: 211, word: "fertile", baseForm: "fertile", pos: "adj", definition_ch: "肥沃的；能生長植物的", sentence: "The _______ soil helped the farmers grow many crops this year."},
+{id: 212, word: "fictional", baseForm: "fictional", pos: "adj", definition_ch: "虛構的；非真實存在的", sentence: "The novel features a/an _______ town that feels very real."},
+{id: 213, word: "finite", baseForm: "finite", pos: "adj", definition_ch: "有限的；有界限的", sentence: "Human life is _______, so we must cherish every moment."},
+{id: 214, word: "fireplace", baseForm: "fireplace", pos: "n", definition_ch: "壁爐；室內取暖爐", sentence: "We sat comfortably by the warm _______ during the cold evening."},
+{id: 215, word: "fist", baseForm: "fist", pos: "n", definition_ch: "拳頭；握緊的手", sentence: "He clenched his _______ tightly before speaking to the crowd."},
+{id: 216, word: "flair", baseForm: "flair", pos: "n", definition_ch: "天賦；獨特的才能或風格", sentence: "She has a/an _______ for designing beautiful and creative clothes."},
+{id: 217, word: "flashback", baseForm: "flashback", pos: "n", definition_ch: "閃回；回憶片段", sentence: "The movie included a/an _______ to the hero’s childhood memories."},
+{id: 218, word: "flatten", baseForm: "flatten", pos: "v", definition_ch: "使變平；將…弄平", sentence: "Please _______ the cardboard boxes before recycling them."},
+{id: 219, word: "flawless", baseForm: "flawless", pos: "adj", definition_ch: "完美無瑕的；沒有缺點的", sentence: "She gave a/an _______ performance that impressed all the judges."},
+{id: 220, word: "floppy", baseForm: "floppy", pos: "adj", definition_ch: "軟而下垂的；鬆軟的", sentence: "She wore a/an _______ hat to protect herself from the sun."},
+{id: 221, word: "fluctuate", baseForm: "fluctuate", pos: "v", definition_ch: "波動；上下起伏", sentence: "Prices tend to _______ depending on the demand and supply."},
+{id: 222, word: "follower", baseForm: "follower", pos: "n", definition_ch: "追隨者；信徒；支持者", sentence: "She gained many followers on social media after posting regularly."},
+{id: 223, word: "forceful", baseForm: "forceful", pos: "adj", definition_ch: "有力的；強而有力的", sentence: "She made a/an _______ argument during the important meeting today."},
+{id: 224, word: "foremost", baseForm: "foremost", pos: "adj", definition_ch: "最重要的；首要的", sentence: "She is the _______ expert in environmental science today."},
+{id: 225, word: "forgery", baseForm: "forgery", pos: "n", definition_ch: "偽造；贗品", sentence: "The police arrested him for _______ of important documents."},
+{id: 226, word: "forgiveness", baseForm: "forgiveness", pos: "n", definition_ch: "寬恕；原諒", sentence: "She asked for _______ after realizing her mistake clearly."},
+{id: 227, word: "formidable", baseForm: "formidable", pos: "adj", definition_ch: "強大的；令人敬畏的", sentence: "She faced a/an _______ opponent in the final match yesterday."},
+{id: 228, word: "foul", baseForm: "foul", pos: "adj", definition_ch: "惡臭的；難聞的", sentence: "The trash gave off a/an _______ smell that made me cough."},
+{id: 229, word: "foul", baseForm: "foul", pos: "n", definition_ch: "犯規；違規行為", sentence: "The referee called a/an _______ during the intense basketball game."},
+{id: 230, word: "fragrance", baseForm: "fragrance", pos: "n", definition_ch: "香味；芳香", sentence: "The _______ of fresh flowers filled the entire room quickly."},
+{id: 231, word: "fragrant", baseForm: "fragrant", pos: "adj", definition_ch: "有香味的；芬芳的", sentence: "The garden was filled with _______ flowers after the rain."},
+{id: 232, word: "frail", baseForm: "frail", pos: "adj", definition_ch: "虛弱的；易受傷的；脆弱的", sentence: "The _______ old man needed help crossing the busy street."},
+{id: 233, word: "frantic", baseForm: "frantic", pos: "adj", definition_ch: "發狂的；極度慌亂的", sentence: "She made a/an _______ search for her lost keys before leaving."},
+{id: 234, word: "fraudulent", baseForm: "fraudulent", pos: "adj", definition_ch: "欺騙的；不誠實的", sentence: "The company was fined for using _______ advertising methods."},
+{id: 235, word: "frenzy", baseForm: "frenzy", pos: "n", definition_ch: "狂熱；狂亂", sentence: "The fans went into a/an _______ when the team scored the winning goal."},
+{id: 236, word: "fringe", baseForm: "fringe", pos: "adj", definition_ch: "邊緣的；次要的", sentence: "She wore a/an _______ jacket to the music festival last weekend."},
+{id: 237, word: "fringe", baseForm: "fringe", pos: "n", definition_ch: "裝飾用的流蘇或緣飾", sentence: "The dress was decorated with a beautiful _______ along the edges."},
+{id: 238, word: "frontier", baseForm: "frontier", pos: "n", definition_ch: "邊界；邊疆地帶", sentence: "The pioneers settled near the western _______ of the country."},
+{id: 239, word: "frown", baseForm: "frown", pos: "n", definition_ch: "皺眉；不悅表情", sentence: "She wore a deep _______ after hearing the bad news today."},
+{id: 240, word: "frown", baseForm: "frown", pos: "v", definition_ch: "皺眉；表示不悅或困惑", sentence: "She began to _______ when she saw the confusing instructions."},
+{id: 241, word: "fulfilling", baseForm: "fulfilling", pos: "adj", definition_ch: "令人滿足的；有成就感的", sentence: "She finds her work as a teacher deeply _______ and rewarding."},
+{id: 242, word: "fulfilment", baseForm: "fulfilment", pos: "n", definition_ch: "滿足感；成就感", sentence: "She found great _______ in helping others every day."},
+{id: 243, word: "further", baseForm: "further", pos: "v", definition_ch: "促進；推進", sentence: "She worked hard to _______ her career in the company."},
+{id: 244, word: "fury", baseForm: "fury", pos: "n", definition_ch: "極度的憤怒；狂怒", sentence: "She expressed her _______ after hearing the unfair decision."},
+{id: 245, word: "fussy", baseForm: "fussy", pos: "adj", definition_ch: "挑剔的；過於講究的", sentence: "She is very _______ about the cleanliness of her room."},
+{id: 246, word: "gamble", baseForm: "gamble", pos: "n", definition_ch: "賭博；冒險行為", sentence: "He decided to take a/an _______ on the new business venture."},
+{id: 247, word: "gamble", baseForm: "gamble", pos: "v", definition_ch: "賭博；冒險投資", sentence: "He decided to _______ all his money on the risky game."},
+{id: 248, word: "gasp", baseForm: "gasp", pos: "n", definition_ch: "喘息；倒抽一口氣", sentence: "She let out a/an _______ when she saw the beautiful sunset."},
+{id: 249, word: "gasp", baseForm: "gasp", pos: "v", definition_ch: "喘息；倒抽一口氣", sentence: "She began to _______ for air after running up the stairs quickly."},
+{id: 250, word: "gesture", baseForm: "gesture", pos: "v", definition_ch: "做手勢；示意", sentence: "She decided to _______ kindly to the lost tourists for help."},
+{id: 251, word: "giggle", baseForm: "giggle", pos: "v", definition_ch: "咯咯地笑，輕聲笑", sentence: "The children _______ quietly during the funny story."},
+{id: 252, word: "glare", baseForm: "glare", pos: "n", definition_ch: "刺眼的強光；怒視", sentence: "She gave him a fierce _______ after he interrupted her speech."},
+{id: 253, word: "glare", baseForm: "glare", pos: "v", definition_ch: "怒目而視；瞪眼表示不滿", sentence: "She began to _______ at him after he ignored her warning."},
+{id: 254, word: "glow", baseForm: "glow", pos: "n", definition_ch: "柔和而持久的光；微光", sentence: "The soft _______ of the candle lit up the entire room."},
+{id: 255, word: "glow", baseForm: "glow", pos: "v", definition_ch: "發出柔和持續的光；發光", sentence: "The fireflies _______ softly in the dark summer night."},
+{id: 256, word: "glue", baseForm: "glue", pos: "n", definition_ch: "用來黏合物品的膠水", sentence: "I used _______ to fix the broken pieces of the vase."},
+{id: 257, word: "glue", baseForm: "glue", pos: "v", definition_ch: "用膠水黏合或固定物品", sentence: "She used _______ to fix the broken pieces of the vase."},
+{id: 258, word: "grace", baseForm: "grace", pos: "v", definition_ch: "使優雅；使有風度", sentence: "She graced the stage with her elegant dance performance."},
+{id: 259, word: "graceful", baseForm: "graceful", pos: "adj", definition_ch: "優雅的；動作輕盈美感", sentence: "The dancer moved with a/an _______ and effortless style on stage."},
+{id: 260, word: "grammatical", baseForm: "grammatical", pos: "adj", definition_ch: "符合語法；文法的", sentence: "She made a few _______ errors in her English essay."},
+{id: 261, word: "grim", baseForm: "grim", pos: "adj", definition_ch: "嚴峻的；令人沮喪的", sentence: "The future looks _______ if we do not change our habits soon."},
+{id: 262, word: "groan", baseForm: "groan", pos: "n", definition_ch: "呻吟聲；悲歎聲", sentence: "She let out a deep _______ after hearing the bad news."},
+{id: 263, word: "groan", baseForm: "groan", pos: "v", definition_ch: "呻吟；抱怨", sentence: "She began to _______ loudly after twisting her ankle during the hike."},
+{id: 264, word: "grounds", baseForm: "grounds", pos: "n", definition_ch: "土地；場地；庭院", sentence: "The school _______ are large and well maintained for students."},
+{id: 265, word: "gulf", baseForm: "gulf", pos: "n", definition_ch: "海灣；海灣狹長的水域", sentence: "The small boat sailed across the calm _______ near the coast."},
+{id: 266, word: "guts", baseForm: "guts", pos: "n", definition_ch: "勇氣；膽量", sentence: "It takes _______ to stand up and speak in front of everyone."},
+{id: 267, word: "hail", baseForm: "hail", pos: "n", definition_ch: "冰雹；由冰粒組成的降水", sentence: "The _______ damaged the car during the heavy storm yesterday."},
+{id: 268, word: "harmless", baseForm: "harmless", pos: "adj", definition_ch: "無害的；不會造成傷害的", sentence: "The snake looks dangerous but is actually completely _______."},
+{id: 269, word: "harshly", baseForm: "harshly", pos: "adv", definition_ch: "嚴厲地；苛刻地", sentence: "The teacher spoke _______ to the students for being late."},
+{id: 270, word: "haul", baseForm: "haul", pos: "n", definition_ch: "一次大量的運輸或獲得", sentence: "The fishermen were proud of their big _______ this morning."},
+{id: 271, word: "haul", baseForm: "haul", pos: "v", definition_ch: "拖拉；搬運", sentence: "They had to _______ the heavy boxes up the stairs carefully."},
+{id: 272, word: "hazardous", baseForm: "hazardous", pos: "adj", definition_ch: "有害的；危險的", sentence: "Working with _______ chemicals requires careful safety measures."},
+{id: 273, word: "heap", baseForm: "heap", pos: "n", definition_ch: "一堆；大量堆積的東西", sentence: "She found a/an _______ of old books in the attic corner."},
+{id: 274, word: "heir", baseForm: "heir", pos: "n", definition_ch: "繼承人；遺產的承繼者", sentence: "The king's only _______ will inherit the throne after his death."},
+{id: 275, word: "hesitation", baseForm: "hesitation", pos: "n", definition_ch: "猶豫；遲疑", sentence: "She showed _______ before answering the difficult question clearly."},
+{id: 276, word: "hierarchical", baseForm: "hierarchical", pos: "adj", definition_ch: "分層的；階層式的", sentence: "The company's _______ structure clearly defines each employee's role."},
+{id: 277, word: "hinder", baseForm: "hinder", pos: "v", definition_ch: "阻礙；妨礙", sentence: "Heavy traffic can _______ your ability to arrive on time."},
+{id: 278, word: "homelessness", baseForm: "homelessness", pos: "n", definition_ch: "無家可歸的狀態或情況", sentence: "_______ affects many people in large cities worldwide."},
+{id: 279, word: "hop", baseForm: "hop", pos: "v", definition_ch: "單腳跳；輕跳", sentence: "The rabbit can _______ quickly across the grassy field."},
+{id: 280, word: "hopelessly", baseForm: "hopelessly", pos: "adv", definition_ch: "絕望地；無可救藥地", sentence: "She was _______ lost in the unfamiliar city at night."},
+{id: 281, word: "horrified", baseForm: "horrified", pos: "adj", definition_ch: "感到極度恐懼或震驚的", sentence: "She was _______ to see the damage after the storm."},
+{id: 282, word: "horrifying", baseForm: "horrifying", pos: "adj", definition_ch: "令人恐懼的；可怕的", sentence: "The movie showed a/an _______ scene that scared many viewers."},
+{id: 283, word: "hum", baseForm: "hum", pos: "v", definition_ch: "發出嗡嗡聲；低聲哼唱", sentence: "She began to _______ a cheerful tune while cooking dinner."},
+{id: 284, word: "humiliated", baseForm: "humiliated", pos: "adj", definition_ch: "感到羞辱的；蒙受恥辱的", sentence: "She felt _______ after forgetting her lines on stage."},
+{id: 285, word: "humiliating", baseForm: "humiliating", pos: "adj", definition_ch: "令人感到羞辱的；丟臉的", sentence: "Losing the game in front of everyone was _______ for her."},
+{id: 286, word: "humility", baseForm: "humility", pos: "n", definition_ch: "謙遜；謙卑的品質或態度", sentence: "She accepted the award with great _______ and gratitude."},
+{id: 287, word: "hygienic", baseForm: "hygienic", pos: "adj", definition_ch: "衛生的；促進健康的", sentence: "It is important to keep your kitchen _______ to prevent illness."},
+{id: 288, word: "hypocrisy", baseForm: "hypocrisy", pos: "n", definition_ch: "偽善；虛偽", sentence: "His _______ was clear when he criticized others but did the same."},
+{id: 289, word: "hypocritical", baseForm: "hypocritical", pos: "adj", definition_ch: "偽善的；表裡不一的", sentence: "It is _______ to criticize others but make the same mistakes."},
+{id: 290, word: "icily", baseForm: "icily", pos: "adv", definition_ch: "冷淡地；帶有敵意地", sentence: "She answered his question _______, showing no interest in talking."},
+{id: 291, word: "idle", baseForm: "idle", pos: "adj", definition_ch: "閒置的；無所事事的", sentence: "The factory machines remained _______ during the holiday break."},
+{id: 292, word: "idol", baseForm: "idol", pos: "n", definition_ch: "偶像；被崇拜的人或物", sentence: "Many young people look up to their favorite pop _______."},
+{id: 293, word: "ignorant", baseForm: "ignorant", pos: "adj", definition_ch: "無知的；缺乏知識的", sentence: "He was _______ about the rules, so he made many mistakes."},
+{id: 294, word: "illiterate", baseForm: "illiterate", pos: "adj", definition_ch: "不識字的；文盲的", sentence: "Many adults remain _______ due to lack of proper education."},
+{id: 295, word: "imitation", baseForm: "imitation", pos: "n", definition_ch: "模仿；仿製品", sentence: "Her _______ of the teacher made everyone laugh in class."},
+{id: 296, word: "immature", baseForm: "immature", pos: "adj", definition_ch: "不成熟的；未完全發育的", sentence: "His _______ behavior often causes problems with his friends."},
+{id: 297, word: "immortal", baseForm: "immortal", pos: "adj", definition_ch: "不死的；永生的", sentence: "Many stories tell of heroes who become _______ through their deeds."},
+{id: 298, word: "immune system", baseForm: "immune system", pos: "n", definition_ch: "免疫系統", sentence: "A strong _______ helps protect you from many diseases."},
+{id: 299, word: "impatience", baseForm: "impatience", pos: "n", definition_ch: "不耐煩；急躁", sentence: "Her _______ grew as the meeting continued without progress."},
+{id: 300, word: "imperative", baseForm: "imperative", pos: "adj", definition_ch: "必要的；緊急的；極重要的", sentence: "It is _______ to finish the project before the deadline arrives."},
+{id: 301, word: "implicit", baseForm: "implicit", pos: "adj", definition_ch: "含蓄的；暗示的，未明說的", sentence: "Her _______ trust in him made their partnership very strong."},
+{id: 302, word: "impossibility", baseForm: "impossibility", pos: "n", definition_ch: "不可能；無法實現", sentence: "The _______ of the task made everyone feel discouraged quickly."},
+{id: 303, word: "impulse", baseForm: "impulse", pos: "n", definition_ch: "衝動；推動力", sentence: "She bought the dress on _______ without thinking twice."},
+{id: 304, word: "impulsive", baseForm: "impulsive", pos: "adj", definition_ch: "衝動的；不加思考的", sentence: "She made a/an _______ decision to buy the expensive dress."},
+{id: 305, word: "inclination", baseForm: "inclination", pos: "n", definition_ch: "傾向；意向；愛好", sentence: "She has a strong _______ to help others in need."},
+{id: 306, word: "inconceivable", baseForm: "inconceivable", pos: "adj", definition_ch: "難以想像的；不可思議的", sentence: "It is _______ that she forgot such an important meeting."},
+{id: 307, word: "inconsiderate", baseForm: "inconsiderate", pos: "adj", definition_ch: "不體貼；欠考慮他人", sentence: "It was _______ to play loud music late at night."},
+{id: 308, word: "incurable", baseForm: "incurable", pos: "adj", definition_ch: "無法治癒的；不可醫治的", sentence: "She was diagnosed with a/an _______ disease last year."},
+{id: 309, word: "indefinitely", baseForm: "indefinitely", pos: "adv", definition_ch: "無限期地；無確定期限地", sentence: "The meeting has been postponed _______ due to unforeseen issues."},
+{id: 310, word: "indifference", baseForm: "indifference", pos: "n", definition_ch: "漠不關心；冷淡", sentence: "Her _______ to the problem frustrated everyone in the team."},
+{id: 311, word: "indifferent", baseForm: "indifferent", pos: "adj", definition_ch: "漠不關心的；無動於衷的", sentence: "She seemed _______ to the news about the upcoming exam."},
+{id: 312, word: "indispensable", baseForm: "indispensable", pos: "adj", definition_ch: "不可或缺的；必需的", sentence: "Good communication skills are _______ for any successful manager."},
+{id: 313, word: "indisputable", baseForm: "indisputable", pos: "adj", definition_ch: "無可爭議的；無可否認的", sentence: "Her talent in music is _______ among all the judges."},
+{id: 314, word: "individuality", baseForm: "individuality", pos: "n", definition_ch: "個人特質；個性，獨特性", sentence: "Her _______ shines through her unique style and confident attitude."},
+{id: 315, word: "industrious", baseForm: "industrious", pos: "adj", definition_ch: "勤勞的；勤奮的", sentence: "She is a/an _______ student who always completes her assignments on time."},
+{id: 316, word: "inexplicable", baseForm: "inexplicable", pos: "adj", definition_ch: "無法解釋的；難以理解的", sentence: "She felt a/an _______ sadness after hearing the unexpected news."},
+{id: 317, word: "infancy", baseForm: "infancy", pos: "n", definition_ch: "嬰兒期；初期階段", sentence: "The technology was still in its _______ during the early 2000s."},
+{id: 318, word: "infectious", baseForm: "infectious", pos: "adj", definition_ch: "具傳染性；易傳播疾病", sentence: "Her _______ laughter made everyone in the room smile."},
+{id: 319, word: "inferior", baseForm: "inferior", pos: "n", definition_ch: "下屬；下級人員", sentence: "The manager spoke to his _______ with respect and kindness."},
+{id: 320, word: "inferiority", baseForm: "inferiority", pos: "n", definition_ch: "自卑；劣勢感", sentence: "She struggled with feelings of _______ at her new school."},
+{id: 321, word: "infinite", baseForm: "infinite", pos: "adj", definition_ch: "無限的；無窮的", sentence: "The universe seems to have _______ stars beyond our imagination."},
+{id: 322, word: "infinitely", baseForm: "infinitely", pos: "adv", definition_ch: "無限地；極大地", sentence: "The new software is _______ better than the previous version."},
+{id: 323, word: "influx", baseForm: "influx", pos: "n", definition_ch: "大量湧入；匯集", sentence: "The city experienced a/an _______ of tourists during the summer months."},
+{id: 324, word: "inhabit", baseForm: "inhabit", pos: "v", definition_ch: "居住於；棲息於", sentence: "Many animals _______ the dense forests of this region."},
+{id: 325, word: "inheritance", baseForm: "inheritance", pos: "n", definition_ch: "遺產；繼承的財產或權利", sentence: "She received a large _______ from her grandmother last year."},
+{id: 326, word: "inhibition", baseForm: "inhibition", pos: "n", definition_ch: "抑制；阻止", sentence: "Her _______ prevented her from speaking in public confidently."},
+{id: 327, word: "inhuman", baseForm: "inhuman", pos: "adj", definition_ch: "不近人情的；殘酷的", sentence: "The prisoners suffered _______ treatment during the war."},
+{id: 328, word: "innate", baseForm: "innate", pos: "adj", definition_ch: "與生俱來的；天生的", sentence: "She has a/an _______ ability to understand other people's feelings."},
+{id: 329, word: "innocence", baseForm: "innocence", pos: "n", definition_ch: "無罪；純潔", sentence: "The child's _______ was clear in her honest and kind behavior."},
+{id: 330, word: "innumerable", baseForm: "innumerable", pos: "adj", definition_ch: "無數的；數不清的", sentence: "There are _______ stars shining in the night sky."},
+{id: 331, word: "inquiry", baseForm: "inquiry", pos: "n", definition_ch: "詢問；調查", sentence: "The company launched a/an _______ into the recent safety concerns."},
+{id: 332, word: "insane", baseForm: "insane", pos: "adj", definition_ch: "精神失常的；瘋狂的", sentence: "It was _______ to climb the mountain during the storm."},
+{id: 333, word: "insecure", baseForm: "insecure", pos: "adj", definition_ch: "缺乏安全感的；不自信的", sentence: "She felt _______ about her presentation in front of the audience."},
+{id: 334, word: "insecurity", baseForm: "insecurity", pos: "n", definition_ch: "不安全感；缺乏自信", sentence: "Her _______ about speaking caused her to avoid social events."},
+{id: 335, word: "inseparable", baseForm: "inseparable", pos: "adj", definition_ch: "形容無法分離；密不可分", sentence: "They have been _______ friends since childhood and always support each other."},
+{id: 336, word: "insofar as", baseForm: "insofar as", pos: "conj", definition_ch: "在……範圍內", sentence: "You can help _______ your time allows this week."},
+{id: 337, word: "insomnia", baseForm: "insomnia", pos: "n", definition_ch: "失眠症", sentence: "Many people suffer from _______ due to stress or anxiety nowadays."},
+{id: 338, word: "intellect", baseForm: "intellect", pos: "n", definition_ch: "智力；理智", sentence: "Her _______ helped her solve difficult problems quickly."},
+{id: 339, word: "intellectually", baseForm: "intellectually", pos: "adv", definition_ch: "在智力上；理智地", sentence: "She found the book _______ challenging but very rewarding."},
+{id: 340, word: "intensely", baseForm: "intensely", pos: "adv", definition_ch: "強烈地；劇烈地；極度地", sentence: "She stared _______ at the painting for several minutes."},
+{id: 341, word: "intolerable", baseForm: "intolerable", pos: "adj", definition_ch: "無法忍受的；不能容忍的", sentence: "The noise from the construction site was simply _______ today."},
+{id: 342, word: "intolerance", baseForm: "intolerance", pos: "n", definition_ch: "不寬容；不能容忍", sentence: "_______ often leads to conflicts in diverse communities."},
+{id: 343, word: "intolerant", baseForm: "intolerant", pos: "adj", definition_ch: "不寬容的；無法容忍的", sentence: "She was _______ of different opinions during the meeting."},
+{id: 344, word: "intrinsic", baseForm: "intrinsic", pos: "adj", definition_ch: "內在的；本質的；固有的", sentence: "The _______ value of honesty is recognized by most people."},
+{id: 345, word: "introvert", baseForm: "introvert", pos: "n", definition_ch: "內向者", sentence: "a/an _______ often prefers reading books to attending large parties."},
+{id: 346, word: "intrude", baseForm: "intrude", pos: "v", definition_ch: "闖入；打擾，干涉他人事務", sentence: "Please do not _______ when others are having a private conversation."},
+{id: 347, word: "intruder", baseForm: "intruder", pos: "n", definition_ch: "入侵者；擅入者", sentence: "The _______ was caught trying to enter the house at night."},
+{id: 348, word: "intrusion", baseForm: "intrusion", pos: "n", definition_ch: "侵入；闖入；干擾", sentence: "The loud noise was an unwelcome _______ during the meeting."},
+{id: 349, word: "intuition", baseForm: "intuition", pos: "n", definition_ch: "直覺；本能認知", sentence: "She trusted her _______ when making the difficult decision."},
+{id: 350, word: "invariably", baseForm: "invariably", pos: "adv", definition_ch: "總是；不變地", sentence: "She _______ arrives at work early every single day."},
+{id: 351, word: "irrational", baseForm: "irrational", pos: "adj", definition_ch: "不理性的；無理性的", sentence: "His _______ fear of spiders stops him from entering the garden."},
+{id: 352, word: "irresistible", baseForm: "irresistible", pos: "adj", definition_ch: "無法抗拒的", sentence: "The chocolate cake was so _______ that everyone wanted a slice."},
+{id: 353, word: "irreversible", baseForm: "irreversible", pos: "adj", definition_ch: "無法逆轉的；不可逆的", sentence: "The damage caused by the fire was _______ and very severe."},
+{id: 354, word: "irritable", baseForm: "irritable", pos: "adj", definition_ch: "易怒的；脾氣暴躁的", sentence: "She becomes _______ when she does not get enough sleep."},
+{id: 355, word: "irritation", baseForm: "irritation", pos: "n", definition_ch: "刺激；惱怒", sentence: "She felt _______ on her skin after touching the plant."},
+{id: 356, word: "jam", baseForm: "jam", pos: "v", definition_ch: "塞入；卡住", sentence: "Please do not _______ the printer with too much paper."},
+{id: 357, word: "juggle", baseForm: "juggle", pos: "v", definition_ch: "拋接雜耍；同時操作", sentence: "She can easily _______ three balls without dropping any."},
+{id: 358, word: "juicy", baseForm: "juicy", pos: "adj", definition_ch: "多汁的；汁液豐富的", sentence: "She bit into a/an _______ apple and smiled with delight."},
+{id: 359, word: "justifiable", baseForm: "justifiable", pos: "adj", definition_ch: "可被證明合理或正當的", sentence: "Her decision to leave early was _______ given the circumstances."},
+{id: 360, word: "knot", baseForm: "knot", pos: "n", definition_ch: "繩子、線等打成的結", sentence: "She tied a tight _______ to secure the package firmly."},
+{id: 361, word: "knowingly", baseForm: "knowingly", pos: "adv", definition_ch: "有意地；明知地", sentence: "She _______ ignored the warning signs before the accident."},
+{id: 362, word: "knuckle", baseForm: "knuckle", pos: "n", definition_ch: "指關節部位", sentence: "He cracked his knuckles before starting the difficult task."},
+{id: 363, word: "laid-back", baseForm: "laid-back", pos: "adj", definition_ch: "悠閒的；輕鬆自在的", sentence: "She has a/an _______ attitude that helps reduce stress daily."},
+{id: 364, word: "lavish", baseForm: "lavish", pos: "adj", definition_ch: "奢華的；豐富的；大方的", sentence: "They threw a/an _______ party to celebrate their wedding anniversary."},
+{id: 365, word: "lenient", baseForm: "lenient", pos: "adj", definition_ch: "寬容的；寬大的", sentence: "The teacher was _______ with students who submitted homework late."},
+{id: 366, word: "lifespan", baseForm: "lifespan", pos: "n", definition_ch: "壽命；生命持續的時間", sentence: "The average _______ of a butterfly is only a few weeks."},
+{id: 367, word: "linen", baseForm: "linen", pos: "n", definition_ch: "亞麻布；亞麻製品", sentence: "The hotel provides fresh _______ for every guest each day."},
+{id: 368, word: "literal", baseForm: "literal", pos: "adj", definition_ch: "照字面意義的；字面的", sentence: "She took his words in a/an _______ sense without any doubt."},
+{id: 369, word: "literate", baseForm: "literate", pos: "adj", definition_ch: "能閱讀和書寫的", sentence: "Being _______ is essential for success in modern society."},
+{id: 370, word: "loathe", baseForm: "loathe", pos: "v", definition_ch: "厭惡；憎恨", sentence: "Many people _______ the taste of bitter vegetables in meals."},
+{id: 371, word: "loathing", baseForm: "loathing", pos: "n", definition_ch: "厭惡；強烈的反感", sentence: "She felt deep _______ for the unfair treatment at work."},
+{id: 372, word: "loft", baseForm: "loft", pos: "n", definition_ch: "閣樓；頂樓空間", sentence: "They converted the old attic into a spacious _______ apartment."},
+{id: 373, word: "logically", baseForm: "logically", pos: "adv", definition_ch: "合邏輯地；符合邏輯地", sentence: "She _______ explained her reasons for changing the project plan."},
+{id: 374, word: "longevity", baseForm: "longevity", pos: "n", definition_ch: "長壽；壽命長", sentence: "Regular exercise contributes to the _______ of a healthy life."},
+{id: 375, word: "longing", baseForm: "longing", pos: "n", definition_ch: "渴望；強烈的思念或盼望", sentence: "She felt a deep _______ to visit her hometown again soon."},
+{id: 376, word: "long-lasting", baseForm: "long-lasting", pos: "adj", definition_ch: "持久的；能長時間維持的", sentence: "This brand is known for its _______ and durable products."},
+{id: 377, word: "long-running", baseForm: "long-running", pos: "adj", definition_ch: "長期持續的；持久的", sentence: "The _______ TV show has gained many loyal fans over years."},
+{id: 378, word: "loosen", baseForm: "loosen", pos: "v", definition_ch: "使變鬆；放寬", sentence: "You need to _______ the screws before removing the cover."},
+{id: 379, word: "lucrative", baseForm: "lucrative", pos: "adj", definition_ch: "有利可圖的；賺錢的", sentence: "She found a/an _______ job in the technology industry last year."},
+{id: 380, word: "lump", baseForm: "lump", pos: "n", definition_ch: "腫塊；塊狀物", sentence: "She found a small _______ on her arm during the checkup."},
+{id: 381, word: "lure", baseForm: "lure", pos: "n", definition_ch: "誘餌；吸引力", sentence: "The bright colors of the fish acted as a/an _______ for predators."},
+{id: 382, word: "lure", baseForm: "lure", pos: "v", definition_ch: "誘使；引誘", sentence: "Fishermen often use bait to _______ fish into their nets."},
+{id: 383, word: "malicious", baseForm: "malicious", pos: "adj", definition_ch: "惡意的；懷有敵意的", sentence: "He spread _______ rumors to damage her reputation at work."},
+{id: 384, word: "masterpiece", baseForm: "masterpiece", pos: "n", definition_ch: "傑作；代表作", sentence: "The painting is considered his greatest _______ of all time."},
+{id: 385, word: "materialism", baseForm: "materialism", pos: "n", definition_ch: "唯物主義；重視物質", sentence: "Many people criticize _______ for causing unhappiness in society."},
+{id: 386, word: "materialist", baseForm: "materialist", pos: "adj", definition_ch: "唯物主義的；物質主義的", sentence: "He has a/an _______ view that money equals happiness."},
+{id: 387, word: "materialist", baseForm: "materialist", pos: "n", definition_ch: "唯物主義者；重視物質者", sentence: "He is a/an _______ who values possessions over emotions."},
+{id: 388, word: "materialistic", baseForm: "materialistic", pos: "adj", definition_ch: "物質主義的；重視物質的", sentence: "Many people believe that being _______ can harm personal relationships."},
+{id: 389, word: "medically", baseForm: "medically", pos: "adv", definition_ch: "醫學上地；在醫療方面", sentence: "The patient was _______ cleared to resume normal activities today."},
+{id: 390, word: "mediocre", baseForm: "mediocre", pos: "adj", definition_ch: "平庸的；普通的", sentence: "The movie was _______ and failed to impress the audience."},
+{id: 391, word: "mediocrity", baseForm: "mediocrity", pos: "n", definition_ch: "平庸；普通", sentence: "Many people settle for _______ instead of striving for excellence."},
+{id: 392, word: "merciful", baseForm: "merciful", pos: "adj", definition_ch: "仁慈的；寬恕的", sentence: "The _______ judge reduced the sentence for the first offense."},
+{id: 393, word: "merciless", baseForm: "merciless", pos: "adj", definition_ch: "無情的；殘忍的", sentence: "The _______ storm destroyed many homes along the coast."},
+{id: 394, word: "merit", baseForm: "merit", pos: "v", definition_ch: "值得；應得", sentence: "Her hard work merits recognition from the entire team."},
+{id: 395, word: "meticulous", baseForm: "meticulous", pos: "adj", definition_ch: "一絲不苟；注重細節", sentence: "She is _______ when organizing her important documents."},
+{id: 396, word: "mighty", baseForm: "mighty", pos: "adj", definition_ch: "強大的；有力量的", sentence: "The _______ river carved its path through the vast mountains."},
+{id: 397, word: "millennium", baseForm: "millennium", pos: "n", definition_ch: "千年；一千年的期間", sentence: "The city celebrated its _______ with grand festivals and fireworks."},
+{id: 398, word: "mingle", baseForm: "mingle", pos: "v", definition_ch: "混合；交往；融入人群", sentence: "At the party, guests _______ to share stories and enjoy music."},
+{id: 399, word: "miniature", baseForm: "miniature", pos: "adj", definition_ch: "微型的；小型的", sentence: "She collected _______ models of famous landmarks from Europe."},
+{id: 400, word: "mishap", baseForm: "mishap", pos: "n", definition_ch: "不幸事故；小災禍", sentence: "She recovered quickly after the minor _______ in the kitchen."},
+{id: 401, word: "misinterpret", baseForm: "misinterpret", pos: "v", definition_ch: "誤解；誤釋", sentence: "She tends to _______ his silence as anger or frustration."},
+{id: 402, word: "misinterpretation", baseForm: "misinterpretation", pos: "n", definition_ch: "誤解；錯誤的解釋或理解", sentence: "The _______ of instructions caused the project to fail."},
+{id: 403, word: "misplace", baseForm: "misplace", pos: "v", definition_ch: "放錯地方；遺失", sentence: "I often _______ my keys when I'm in a hurry."},
+{id: 404, word: "moan", baseForm: "moan", pos: "v", definition_ch: "呻吟；抱怨", sentence: "She began to _______ loudly after hitting her toe on the table."},
+{id: 405, word: "moderate", baseForm: "moderate", pos: "v", definition_ch: "使緩和；減輕", sentence: "The teacher will _______ the discussion during the group project."},
+{id: 406, word: "moderately", baseForm: "moderately", pos: "adv", definition_ch: "適度地；中等程度地", sentence: "She was _______ happy with the results of her exam."},
+{id: 407, word: "modestly", baseForm: "modestly", pos: "adv", definition_ch: "謙虛地；適度地", sentence: "She _______ accepted the award without boasting about her success."},
+{id: 408, word: "monetary", baseForm: "monetary", pos: "adj", definition_ch: "貨幣的；與金錢有關的", sentence: "The government announced new _______ policies to control inflation."},
+{id: 409, word: "morale", baseForm: "morale", pos: "n", definition_ch: "士氣；精神狀態", sentence: "The team's _______ improved after winning the important match."},
+{id: 410, word: "mortality", baseForm: "mortality", pos: "n", definition_ch: "死亡率；必死的狀態", sentence: "The study focuses on reducing infant _______ rates worldwide."},
+{id: 411, word: "muddle", baseForm: "muddle", pos: "n", definition_ch: "混亂；困惑的狀態", sentence: "The project was in a/an _______ after the team missed deadlines."},
+{id: 412, word: "muddled", baseForm: "muddled", pos: "adj", definition_ch: "混亂的；糊塗的", sentence: "Her _______ thoughts made it hard to focus on the task."},
+{id: 413, word: "murmur", baseForm: "murmur", pos: "n", definition_ch: "低聲細語；輕聲抱怨聲", sentence: "There was a soft _______ among the crowd during the speech."},
+{id: 414, word: "murmur", baseForm: "murmur", pos: "v", definition_ch: "低聲地說話或抱怨", sentence: "She began to _______ softly, barely audible to anyone nearby."},
+{id: 415, word: "musically", baseForm: "musically", pos: "adv", definition_ch: "音樂上地；與音樂有關地", sentence: "She is _______ talented and plays the piano beautifully."},
+{id: 416, word: "narrator", baseForm: "narrator", pos: "n", definition_ch: "敘述者；講述者", sentence: "The _______ explained the story clearly to the audience."},
+{id: 417, word: "needless", baseForm: "needless", pos: "adj", definition_ch: "不必要的；無需的", sentence: "She made a/an _______ mistake on the simple math test today."},
+{id: 418, word: "negligence", baseForm: "negligence", pos: "n", definition_ch: "疏忽；失職", sentence: "The accident happened because of the driver’s gross _______."},
+{id: 419, word: "negligent", baseForm: "negligent", pos: "adj", definition_ch: "疏忽的；玩忽職守的", sentence: "The manager was _______ in checking the safety procedures carefully."},
+{id: 420, word: "negligible", baseForm: "negligible", pos: "adj", definition_ch: "微不足道的；可以忽略的", sentence: "The cost of the materials was _______ compared to the total budget."},
+{id: 421, word: "nest", baseForm: "nest", pos: "v", definition_ch: "築巢；為鳥類等建造巢穴", sentence: "Birds often _______ in trees during the spring season."},
+{id: 422, word: "normality", baseForm: "normality", pos: "n", definition_ch: "正常狀態；常態", sentence: "After the storm, the city slowly returned to _______ again."},
+{id: 423, word: "nostalgia", baseForm: "nostalgia", pos: "n", definition_ch: "懷舊；思鄉", sentence: "Listening to old songs fills me with a deep sense of _______."},
+{id: 424, word: "nostalgic", baseForm: "nostalgic", pos: "adj", definition_ch: "懷舊的；思念過去的", sentence: "She felt _______ when looking at her childhood photographs."},
+{id: 425, word: "nostril", baseForm: "nostril", pos: "n", definition_ch: "鼻孔，鼻子的開口", sentence: "She flared her nostrils to smell the fragrant flowers nearby."},
+{id: 426, word: "nosy", baseForm: "nosy", pos: "adj", definition_ch: "愛管閒事；好奇他人", sentence: "She is too _______ and always asks about my personal life."},
+{id: 427, word: "novelty", baseForm: "novelty", pos: "n", definition_ch: "新奇事物；新穎趣味", sentence: "The _______ of the new phone attracted many curious buyers quickly."},
+{id: 428, word: "nurse", baseForm: "nurse", pos: "v", definition_ch: "照顧；護理（病人）", sentence: "She decided to _______ her grandmother back to health carefully."},
+{id: 429, word: "obligatory", baseForm: "obligatory", pos: "adj", definition_ch: "義務的；必須履行的", sentence: "Wearing a helmet is _______ for all cyclists in this city."},
+{id: 430, word: "obscene", baseForm: "obscene", pos: "adj", definition_ch: "猥褻的；令人反感的", sentence: "The movie was banned because of its _______ language and scenes."},
+{id: 431, word: "observant", baseForm: "observant", pos: "adj", definition_ch: "觀察敏銳；注意細節", sentence: "She is very _______ and notices small changes quickly."},
+{id: 432, word: "obsessive", baseForm: "obsessive", pos: "adj", definition_ch: "著迷的；過分執著的", sentence: "She has a/an _______ interest in collecting rare books."},
+{id: 433, word: "oddly", baseForm: "oddly", pos: "adv", definition_ch: "奇怪地；古怪地", sentence: "She behaved _______ during the meeting, surprising everyone there."},
+{id: 434, word: "odour", baseForm: "odour", pos: "n", definition_ch: "氣味；臭味", sentence: "The _______ of fresh bread filled the entire bakery shop."},
+{id: 435, word: "off-putting", baseForm: "off-putting", pos: "adj", definition_ch: "令人反感；使人不適", sentence: "Her _______ attitude made it hard to enjoy the event."},
+{id: 436, word: "offset", baseForm: "offset", pos: "v", definition_ch: "抵銷；彌補", sentence: "The company planted trees to _______ its carbon emissions this year."},
+{id: 437, word: "omission", baseForm: "omission", pos: "n", definition_ch: "遺漏；省略", sentence: "The report contained an important _______ that affected the results."},
+{id: 438, word: "openness", baseForm: "openness", pos: "n", definition_ch: "開放；坦率", sentence: "_______ in communication helps build trust among team members."},
+{id: 439, word: "ordeal", baseForm: "ordeal", pos: "n", definition_ch: "嚴酷的考驗；痛苦的經歷", sentence: "She survived the long _______ of recovery after the accident."},
+{id: 440, word: "ornament", baseForm: "ornament", pos: "n", definition_ch: "裝飾品；飾物", sentence: "She hung a beautiful _______ on the Christmas tree."},
+{id: 441, word: "orphan", baseForm: "orphan", pos: "n", definition_ch: "失去父母的兒童", sentence: "The _______ found comfort in the kindness of strangers."},
+{id: 442, word: "orthodox", baseForm: "orthodox", pos: "adj", definition_ch: "正統的；傳統的", sentence: "She follows a/an _______ approach to solving complex problems."},
+{id: 443, word: "outgoing", baseForm: "outgoing", pos: "adj", definition_ch: "外向的；性格開朗的", sentence: "She is very _______ and enjoys meeting new people easily."},
+{id: 444, word: "outgoings", baseForm: "outgoings", pos: "n", definition_ch: "支出；開銷", sentence: "We need to reduce our monthly _______ to save more money."},
+{id: 445, word: "overboard", baseForm: "overboard", pos: "adv", definition_ch: "從船上落水", sentence: "The sailor fell _______ during the storm last night."},
+{id: 446, word: "overflow", baseForm: "overflow", pos: "v", definition_ch: "溢出；超出界限", sentence: "The river may _______ its banks after heavy rainfall this week."},
+{id: 447, word: "overhear", baseForm: "overhear", pos: "v", definition_ch: "無意中聽到", sentence: "I happened to _______ their conversation at the coffee shop."},
+{id: 448, word: "overlap", baseForm: "overlap", pos: "v", definition_ch: "部分重疊；與…部分相同", sentence: "The two meetings _______, so I cannot attend both fully."},
+{id: 449, word: "overload", baseForm: "overload", pos: "n", definition_ch: "超載；負荷過重", sentence: "The computer system crashed due to a/an _______ of tasks."},
+{id: 450, word: "overload", baseForm: "overload", pos: "v", definition_ch: "使負荷過重；使超載", sentence: "The system can easily _______ if too many users connect simultaneously."},
+{id: 451, word: "pact", baseForm: "pact", pos: "n", definition_ch: "協定；協約；條約", sentence: "The two countries signed a/an _______ to promote peace and cooperation."},
+{id: 452, word: "paradigm", baseForm: "paradigm", pos: "n", definition_ch: "範例；典範；思維模式", sentence: "The scientific _______ shifted after the new discovery was made."},
+{id: 453, word: "paradox", baseForm: "paradox", pos: "n", definition_ch: "悖論；自相矛盾", sentence: "It is a/an _______ that less stress can improve your performance."},
+{id: 454, word: "paradoxical", baseForm: "paradoxical", pos: "adj", definition_ch: "矛盾的；似是而非的", sentence: "It is _______ that the poor man is happier than the rich."},
+{id: 455, word: "paramount", baseForm: "paramount", pos: "adj", definition_ch: "最重要的；至高無上的", sentence: "Safety is _______ when working with dangerous machinery."},
+{id: 456, word: "part", baseForm: "part", pos: "v", definition_ch: "分開；分離", sentence: "They decided to _______ ways after the meeting ended yesterday."},
+{id: 457, word: "particle", baseForm: "particle", pos: "n", definition_ch: "微小的粒子；極小的部分", sentence: "a/an _______ of dust floated gently in the sunbeam."},
+{id: 458, word: "pastime", baseForm: "pastime", pos: "n", definition_ch: "消遣；娛樂活動", sentence: "Reading books is a popular _______ for many people worldwide."},
+{id: 459, word: "pat", baseForm: "pat", pos: "v", definition_ch: "輕拍；輕輕地拍打", sentence: "She gave the dog a gentle _______ on the head."},
+{id: 460, word: "patch", baseForm: "patch", pos: "v", definition_ch: "修補；縫補", sentence: "She used a needle and thread to _______ the torn jeans."},
+{id: 461, word: "pathetic", baseForm: "pathetic", pos: "adj", definition_ch: "可憐的；令人同情的", sentence: "His attempt to fix the car was truly _______ and unsuccessful."},
+{id: 462, word: "peel", baseForm: "peel", pos: "v", definition_ch: "剝皮；削皮", sentence: "Please _______ the apples before making the fruit salad."},
+{id: 463, word: "peer pressure", baseForm: "peer pressure", pos: "n", definition_ch: "同儕壓力", sentence: "Many teenagers struggle to resist _______ at school events."},
+{id: 464, word: "perceptive", baseForm: "perceptive", pos: "adj", definition_ch: "有洞察力的；感知敏銳的", sentence: "She is very _______ about people's true feelings and intentions."},
+{id: 465, word: "perfect", baseForm: "perfect", pos: "v", definition_ch: "使完美；使完善", sentence: "She worked hard to _______ her presentation before the meeting."},
+{id: 466, word: "perseverance", baseForm: "perseverance", pos: "n", definition_ch: "堅持不懈；持續努力", sentence: "Her _______ helped her overcome many difficult challenges."},
+{id: 467, word: "persistence", baseForm: "persistence", pos: "n", definition_ch: "堅持不懈；持續的努力", sentence: "Her _______ helped her overcome many difficult challenges."},
+{id: 468, word: "persuasion", baseForm: "persuasion", pos: "n", definition_ch: "說服；勸說的行為或能力", sentence: "Her powers of _______ convinced them to accept the new plan."},
+{id: 469, word: "petty", baseForm: "petty", pos: "adj", definition_ch: "瑣碎的；不重要的", sentence: "She was upset over a/an _______ argument with her colleague yesterday."},
+{id: 470, word: "phenomenal", baseForm: "phenomenal", pos: "adj", definition_ch: "非凡的；驚人的；出色的", sentence: "She gave a/an _______ performance that impressed everyone deeply."},
+{id: 471, word: "pinpoint", baseForm: "pinpoint", pos: "v", definition_ch: "精確找出；準確定位", sentence: "Scientists can _______ the exact cause of the problem quickly."},
+{id: 472, word: "pitiful", baseForm: "pitiful", pos: "adj", definition_ch: "可憐的；令人同情的", sentence: "The stray dog's _______ condition moved everyone to help."},
+{id: 473, word: "pity", baseForm: "pity", pos: "v", definition_ch: "對某人感到同情或憐憫", sentence: "I _______ those who have to work in such difficult conditions."},
+{id: 474, word: "plague", baseForm: "plague", pos: "n", definition_ch: "瘟疫；大流行病", sentence: "The _______ caused many deaths across the continent in history."},
+{id: 475, word: "plague", baseForm: "plague", pos: "v", definition_ch: "使受災禍；使受折磨", sentence: "The village was plagued by severe drought for several years."},
+{id: 476, word: "plausible", baseForm: "plausible", pos: "adj", definition_ch: "看起來合理且可信的", sentence: "Her explanation for being late sounded _______ to everyone present."},
+{id: 477, word: "plight", baseForm: "plight", pos: "n", definition_ch: "困境；苦難的處境", sentence: "The charity aims to help people in desperate _______ every year."},
+{id: 478, word: "plump", baseForm: "plump", pos: "adj", definition_ch: "豐滿的；圓胖的", sentence: "The baby has soft, _______ cheeks that everyone loves to pinch."},
+{id: 479, word: "poetic", baseForm: "poetic", pos: "adj", definition_ch: "詩意的；詩歌風格的", sentence: "The sunset created a/an _______ scene by the quiet lake."},
+{id: 480, word: "ponder", baseForm: "ponder", pos: "v", definition_ch: "仔細考慮；沉思", sentence: "She took a moment to _______ the question before answering."},
+{id: 481, word: "portrayal", baseForm: "portrayal", pos: "n", definition_ch: "描繪；刻畫", sentence: "Her _______ of the character was both vivid and believable."},
+{id: 482, word: "posh", baseForm: "posh", pos: "adj", definition_ch: "豪華的；高級的；時髦的", sentence: "They stayed at a/an _______ hotel during their vacation in London."},
+{id: 483, word: "possessive", baseForm: "possessive", pos: "adj", definition_ch: "佔有慾強；愛表示所有權", sentence: "She became _______ when her friend spent time with others."},
+{id: 484, word: "pragmatic", baseForm: "pragmatic", pos: "adj", definition_ch: "務實的；實用主義的", sentence: "She took a/an _______ approach to solving the complex problem."},
+{id: 485, word: "predominant", baseForm: "predominant", pos: "adj", definition_ch: "主要的；佔優勢的", sentence: "The _______ color in the painting is a bright shade of blue."},
+{id: 486, word: "presumption", baseForm: "presumption", pos: "n", definition_ch: "假定；擅自；冒昧", sentence: "His _______ to speak for others caused some disagreement."},
+{id: 487, word: "preventive", baseForm: "preventive", pos: "adj", definition_ch: "預防的；阻止發生的", sentence: "_______ measures are important to avoid the spread of illness."},
+{id: 488, word: "privileged", baseForm: "privileged", pos: "adj", definition_ch: "享有特權的；有利的", sentence: "She felt _______ to attend the exclusive conference last week."},
+{id: 489, word: "procession", baseForm: "procession", pos: "n", definition_ch: "行列；遊行隊伍", sentence: "The solemn _______ moved slowly through the city streets."},
+{id: 490, word: "profoundly", baseForm: "profoundly", pos: "adv", definition_ch: "深刻地；極度地", sentence: "She was _______ moved by the heartfelt speech yesterday."},
+{id: 491, word: "prosper", baseForm: "prosper", pos: "v", definition_ch: "繁榮；成功發展", sentence: "Small businesses often _______ with good management and customer care."},
+{id: 492, word: "protagonist", baseForm: "protagonist", pos: "n", definition_ch: "主角；主要人物", sentence: "The _______ of the novel faces many challenges and grows stronger."},
+{id: 493, word: "proverb", baseForm: "proverb", pos: "n", definition_ch: "諺語，格言", sentence: "The appetite, says the _______, grows with eating."},
+{id: 494, word: "provocation", baseForm: "provocation", pos: "n", definition_ch: "挑釁；激怒", sentence: "His rude comment was clearly meant as a/an _______ to anger her."},
+{id: 495, word: "proximity", baseForm: "proximity", pos: "n", definition_ch: "接近；鄰近", sentence: "The restaurant's _______ to the station makes it very popular."},
+{id: 496, word: "psychiatrist", baseForm: "psychiatrist", pos: "n", definition_ch: "精神科醫師", sentence: "The _______ helped her manage anxiety through regular therapy sessions."},
+{id: 497, word: "pushy", baseForm: "pushy", pos: "adj", definition_ch: "愛出風頭的；強迫人的", sentence: "She was too _______ when asking for a promotion at work."},
+{id: 498, word: "quaint", baseForm: "quaint", pos: "adj", definition_ch: "古雅；別緻；奇趣", sentence: "She bought a/an _______ cottage in the countryside last summer."},
+{id: 499, word: "questionable", baseForm: "questionable", pos: "adj", definition_ch: "可疑的；有問題的", sentence: "The company's _______ practices raised concerns among investors."},
+{id: 500, word: "racket", baseForm: "racket", pos: "n", definition_ch: "喧鬧聲；嘈雜聲", sentence: "The children made a loud _______ while playing outside."},
+{id: 501, word: "radical", baseForm: "radical", pos: "n", definition_ch: "激進分子；根本變革者", sentence: "The _______ proposed new ideas that changed the entire system."},
+{id: 502, word: "rage", baseForm: "rage", pos: "v", definition_ch: "狂怒；發怒", sentence: "He began to _______ after hearing the unfair decision."},
+{id: 503, word: "rash", baseForm: "rash", pos: "adj", definition_ch: "輕率的；魯莽的", sentence: "It was _______ to invest all his savings without proper research."},
+{id: 504, word: "rash", baseForm: "rash", pos: "n", definition_ch: "皮疹；紅疹", sentence: "She developed a/an _______ after touching the unknown plant."},
+{id: 505, word: "read", baseForm: "read", pos: "n", definition_ch: "閱讀的行為或過程", sentence: "The novel was such a quick and enjoyable _______ yesterday."},
+{id: 506, word: "readiness", baseForm: "readiness", pos: "n", definition_ch: "準備就緒；準備狀態", sentence: "The team's _______ for the project impressed the entire management."},
+{id: 507, word: "readjust", baseForm: "readjust", pos: "v", definition_ch: "重新調整；再次校正", sentence: "She had to _______ the settings on her computer carefully."},
+{id: 508, word: "realistically", baseForm: "realistically", pos: "adv", definition_ch: "現實地；實際地", sentence: "You should _______ assess your chances before applying."},
+{id: 509, word: "reassurance", baseForm: "reassurance", pos: "n", definition_ch: "安慰；使安心的話或行為", sentence: "She gave me _______ before the important job interview."},
+{id: 510, word: "receptive", baseForm: "receptive", pos: "adj", definition_ch: "願接受新意；善於接納", sentence: "She was always _______ to new ideas during team meetings."},
+{id: 511, word: "reckless", baseForm: "reckless", pos: "adj", definition_ch: "魯莽的；不顧後果的", sentence: "His _______ driving caused a serious accident on the highway."},
+{id: 512, word: "recollect", baseForm: "recollect", pos: "v", definition_ch: "回想；記起", sentence: "I can hardly _______ where I left my keys yesterday."},
+{id: 513, word: "recollection", baseForm: "recollection", pos: "n", definition_ch: "回憶；記憶", sentence: "Her _______ of the event was clear and detailed."},
+{id: 514, word: "reconcile", baseForm: "reconcile", pos: "v", definition_ch: "調和；使和解；使一致", sentence: "They tried to _______ their differences after the argument yesterday."},
+{id: 515, word: "reconstruct", baseForm: "reconstruct", pos: "v", definition_ch: "重建；重新建造", sentence: "They plan to _______ the old bridge after the storm damage."},
+{id: 516, word: "recreational", baseForm: "recreational", pos: "adj", definition_ch: "休閒的；娛樂的", sentence: "Many people enjoy _______ activities during their free time."},
+{id: 517, word: "recur", baseForm: "recur", pos: "v", definition_ch: "再次發生；重現", sentence: "Symptoms may _______ if the treatment is stopped too early."},
+{id: 518, word: "redistribute", baseForm: "redistribute", pos: "v", definition_ch: "重新分配", sentence: "The government plans to _______ wealth to reduce poverty."},
+{id: 519, word: "redundant", baseForm: "redundant", pos: "adj", definition_ch: "多餘的；冗長的", sentence: "The instructions were _______ and made the task more confusing."},
+{id: 520, word: "refine", baseForm: "refine", pos: "v", definition_ch: "提煉；使純淨；改善", sentence: "She works hard to _______ her skills before the competition."},
+{id: 521, word: "refined", baseForm: "refined", pos: "adj", definition_ch: "精緻的；優雅的；有教養的", sentence: "She has a/an _______ taste in music and art collections."},
+{id: 522, word: "refrain", baseForm: "refrain", pos: "v", definition_ch: "避免；克制不做某事", sentence: "Please _______ from smoking inside the building at all times."},
+{id: 523, word: "relentless", baseForm: "relentless", pos: "adj", definition_ch: "持續不斷的；不鬆懈的", sentence: "The _______ rain forced us to stay indoors all day."},
+{id: 524, word: "relentlessly", baseForm: "relentlessly", pos: "adv", definition_ch: "持續不斷地；不懈地", sentence: "She worked _______ to finish the project on time."},
+{id: 525, word: "relish", baseForm: "relish", pos: "n", definition_ch: "調味品；佐料", sentence: "She added some _______ to enhance the flavor of her sandwich."},
+{id: 526, word: "relish", baseForm: "relish", pos: "v", definition_ch: "享受；從……中獲得樂趣", sentence: "She relishes the opportunity to learn new languages every day."},
+{id: 527, word: "remorse", baseForm: "remorse", pos: "n", definition_ch: "懊悔；自責", sentence: "She felt deep _______ after hurting her best friend’s feelings."},
+{id: 528, word: "renewable", baseForm: "renewable", pos: "adj", definition_ch: "可再生的；持續利用的", sentence: "Solar power is a popular source of _______ energy worldwide."},
+{id: 529, word: "renewal", baseForm: "renewal", pos: "n", definition_ch: "更新；恢復；續期", sentence: "The _______ of her passport took longer than she expected."},
+{id: 530, word: "repetition", baseForm: "repetition", pos: "n", definition_ch: "重複；反覆做同一件事", sentence: "_______ helps students remember new vocabulary more effectively."},
+{id: 531, word: "reproach", baseForm: "reproach", pos: "n", definition_ch: "責備；指責", sentence: "She felt a deep _______ after forgetting her friend's birthday."},
+{id: 532, word: "reproach", baseForm: "reproach", pos: "v", definition_ch: "責備；斥責", sentence: "She did not _______ him for being late to the meeting."},
+{id: 533, word: "resemblance", baseForm: "resemblance", pos: "n", definition_ch: "相似；相像", sentence: "There is a strong _______ between the two brothers."},
+{id: 534, word: "resent", baseForm: "resent", pos: "v", definition_ch: "憤恨；對…感到不滿", sentence: "She began to _______ the unfair treatment at her workplace."},
+{id: 535, word: "resentment", baseForm: "resentment", pos: "n", definition_ch: "怨恨；不滿情緒", sentence: "She felt deep _______ after being unfairly blamed for the mistake."},
+{id: 536, word: "reserved", baseForm: "reserved", pos: "adj", definition_ch: "內向的；寡言少語的", sentence: "She is a/an _______ person who rarely shares her feelings openly."},
+{id: 537, word: "resilience", baseForm: "resilience", pos: "n", definition_ch: "韌性；恢復力", sentence: "Her _______ helped her overcome many challenges in life."},
+{id: 538, word: "resilient", baseForm: "resilient", pos: "adj", definition_ch: "有彈性；迅速恢復", sentence: "Children are often _______ and can recover from difficulties quickly."},
+{id: 539, word: "resolve", baseForm: "resolve", pos: "n", definition_ch: "決心；堅定的意志", sentence: "Her strong _______ helped her overcome many difficult challenges."},
+{id: 540, word: "resourceful", baseForm: "resourceful", pos: "adj", definition_ch: "足智多謀的；善於應變的", sentence: "She was _______ in solving problems during the project."},
+{id: 541, word: "respectable", baseForm: "respectable", pos: "adj", definition_ch: "值得尊敬的；體面的", sentence: "She earned a/an _______ reputation through hard work and honesty."},
+{id: 542, word: "respectfully", baseForm: "respectfully", pos: "adv", definition_ch: "恭敬地；有禮貌地", sentence: "She _______ declined the invitation to the formal event."},
+{id: 543, word: "restless", baseForm: "restless", pos: "adj", definition_ch: "無法安靜的；焦躁不安的", sentence: "She felt _______ waiting for the important phone call."},
+{id: 544, word: "restrictive", baseForm: "restrictive", pos: "adj", definition_ch: "限制性的；約束多的", sentence: "The company has _______ policies on internet usage during work hours."},
+{id: 545, word: "restructure", baseForm: "restructure", pos: "v", definition_ch: "重組；重整", sentence: "The company decided to _______ its management to improve efficiency."},
+{id: 546, word: "retailer", baseForm: "retailer", pos: "n", definition_ch: "零售商", sentence: "The _______ offers a wide variety of products at low prices."},
+{id: 547, word: "retention", baseForm: "retention", pos: "n", definition_ch: "保留；保持", sentence: "Employee _______ is important for a company’s long term success."},
+{id: 548, word: "reunion", baseForm: "reunion", pos: "n", definition_ch: "重聚；團聚", sentence: "The family planned a/an _______ after many years apart."},
+{id: 549, word: "reversal", baseForm: "reversal", pos: "n", definition_ch: "逆轉；顛倒；反轉", sentence: "The team experienced a surprising _______ in the final minutes."},
+{id: 550, word: "reversible", baseForm: "reversible", pos: "adj", definition_ch: "可逆的；可反轉的", sentence: "This jacket is _______, so you can wear it inside out."},
+{id: 551, word: "revolt", baseForm: "revolt", pos: "v", definition_ch: "反叛；起義；反抗", sentence: "The citizens decided to _______ against the unfair government rules."},
+{id: 552, word: "rhyme", baseForm: "rhyme", pos: "n", definition_ch: "押韻；韻腳", sentence: "The poem has a simple _______ that children can easily remember."},
+{id: 553, word: "rhyme", baseForm: "rhyme", pos: "v", definition_ch: "使押韻；使韻律相同", sentence: "Poets often _______ words to create a musical effect in poems."},
+{id: 554, word: "ribbon", baseForm: "ribbon", pos: "n", definition_ch: "緞帶；絲帶", sentence: "She tied a blue _______ around the gift box carefully."},
+{id: 555, word: "riches", baseForm: "riches", pos: "n", definition_ch: "財富；豐富的資產", sentence: "Many people dream of finding hidden _______ in old treasure chests."},
+{id: 556, word: "right-wing", baseForm: "right-wing", pos: "adj", definition_ch: "右翼的；保守的", sentence: "The _______ party supports lower taxes and less government control."},
+{id: 557, word: "rigid", baseForm: "rigid", pos: "adj", definition_ch: "堅硬的；嚴格的", sentence: "The teacher has a/an _______ schedule that she always follows strictly."},
+{id: 558, word: "riot", baseForm: "riot", pos: "v", definition_ch: "參與暴動", sentence: "The crowd threatened to _______ if their demands were not met quickly."},
+{id: 559, word: "rival", baseForm: "rival", pos: "v", definition_ch: "與…競爭；與…匹敵", sentence: "They _______ each other in both skill and determination."},
+{id: 560, word: "rivalry", baseForm: "rivalry", pos: "n", definition_ch: "競爭；對抗關係", sentence: "The _______ between the two teams lasted for many years."},
+{id: 561, word: "roar", baseForm: "roar", pos: "n", definition_ch: "吼聲；（動物的）咆哮聲", sentence: "The lion’s _______ echoed loudly across the vast savannah."},
+{id: 562, word: "roar", baseForm: "roar", pos: "v", definition_ch: "發出大聲吼叫聲", sentence: "The lion began to _______ loudly in the middle of the night."},
+{id: 563, word: "rocky", baseForm: "rocky", pos: "adj", definition_ch: "多岩石的；布滿岩石的", sentence: "The hikers carefully walked along the _______ mountain trail."},
+{id: 564, word: "rosy", baseForm: "rosy", pos: "adj", definition_ch: "玫瑰色的；樂觀的", sentence: "She has a/an _______ outlook on life despite the challenges."},
+{id: 565, word: "rot", baseForm: "rot", pos: "v", definition_ch: "腐爛；使腐壞", sentence: "If fruit is left out too long, it will start to _______ quickly."},
+{id: 566, word: "ruthless", baseForm: "ruthless", pos: "adj", definition_ch: "無情；殘忍", sentence: "The _______ leader showed no mercy to his opponents."},
+{id: 567, word: "sadden", baseForm: "sadden", pos: "v", definition_ch: "使感到悲傷；使難過", sentence: "It will _______ you to hear about the lost opportunity."},
+{id: 568, word: "saddle", baseForm: "saddle", pos: "n", definition_ch: "馬鞍；鞍座", sentence: "She adjusted the _______ before mounting the horse carefully."},
+{id: 569, word: "saddle", baseForm: "saddle", pos: "v", definition_ch: "給（馬等）裝上馬鞍", sentence: "She helped me _______ the horse before our long ride."},
+{id: 570, word: "sane", baseForm: "sane", pos: "adj", definition_ch: "神智正常的；理智的", sentence: "It is important to stay _______ during stressful times."},
+{id: 571, word: "sarcastic", baseForm: "sarcastic", pos: "adj", definition_ch: "諷刺的；挖苦的", sentence: "She gave a/an _______ reply when asked about her late arrival."},
+{id: 572, word: "saying", baseForm: "saying", pos: "n", definition_ch: "諺語；格言；俗語", sentence: "There is a common _______ that honesty is the best policy."},
+{id: 573, word: "scan", baseForm: "scan", pos: "n", definition_ch: "掃描；快速瀏覽或檢查", sentence: "She gave the document a quick _______ before the meeting started."},
+{id: 574, word: "scar", baseForm: "scar", pos: "v", definition_ch: "留下疤痕；使受傷", sentence: "The deep cut on his arm will _______ after it heals completely."},
+{id: 575, word: "scarcely", baseForm: "scarcely", pos: "adv", definition_ch: "幾乎不；幾乎沒有", sentence: "She could _______ believe the news she had just heard."},
+{id: 576, word: "scarcity", baseForm: "scarcity", pos: "n", definition_ch: "稀缺；短缺", sentence: "The _______ of clean water affects many communities worldwide."},
+{id: 577, word: "schooling", baseForm: "schooling", pos: "n", definition_ch: "教育；學校教育", sentence: "Her _______ provided a strong foundation for future success."},
+{id: 578, word: "scrap", baseForm: "scrap", pos: "n", definition_ch: "廢料；廢棄的金屬或材料", sentence: "The factory recycles _______ metal to create new products efficiently."},
+{id: 579, word: "scrap", baseForm: "scrap", pos: "v", definition_ch: "報廢；廢棄", sentence: "They decided to _______ the old car instead of repairing it."},
+{id: 580, word: "scruffy", baseForm: "scruffy", pos: "adj", definition_ch: "邋遢的；不整潔的", sentence: "He looked _______ after working all day in the garden."},
+{id: 581, word: "secluded", baseForm: "secluded", pos: "adj", definition_ch: "隱蔽的；僻靜的", sentence: "They found a/an _______ spot to enjoy a quiet picnic together."},
+{id: 582, word: "sedentary", baseForm: "sedentary", pos: "adj", definition_ch: "久坐不動的；缺乏運動的", sentence: "a/an _______ lifestyle can lead to various health problems."},
+{id: 583, word: "seduce", baseForm: "seduce", pos: "v", definition_ch: "引誘；誘惑", sentence: "He tried to _______ her with charming words and kind gestures."},
+{id: 584, word: "self-assurance", baseForm: "self-assurance", pos: "n", definition_ch: "自信；對自己能力的信心", sentence: "Her _______ helped her succeed in the challenging interview."},
+{id: 585, word: "self-assured", baseForm: "self-assured", pos: "adj", definition_ch: "自信的；有自我把握的", sentence: "She gave a/an _______ presentation during the team meeting."},
+{id: 586, word: "self-awareness", baseForm: "self-awareness", pos: "n", definition_ch: "自我覺察", sentence: "_______ helps people understand their strengths and weaknesses."},
+{id: 587, word: "self-control", baseForm: "self-control", pos: "n", definition_ch: "自我約束能力", sentence: "She showed great _______ by not eating the tempting cake."},
+{id: 588, word: "self-discipline", baseForm: "self-discipline", pos: "n", definition_ch: "自律", sentence: "Achieving your goals requires consistent _______ and hard work."},
+{id: 589, word: "self-made", baseForm: "self-made", pos: "adj", definition_ch: "自力成功；白手起家", sentence: "She is a/an _______ entrepreneur who built her business alone."},
+{id: 590, word: "self-reliance", baseForm: "self-reliance", pos: "n", definition_ch: "自力更生", sentence: "Developing _______ helps individuals solve problems without constant help."},
+{id: 591, word: "self-reliant", baseForm: "self-reliant", pos: "adj", definition_ch: "獨立自主；自力更生", sentence: "She became _______ after moving out of her parents' house."},
+{id: 592, word: "self-respect", baseForm: "self-respect", pos: "n", definition_ch: "自尊；自我尊重", sentence: "Maintaining _______ is important when facing difficult situations."},
+{id: 593, word: "self-sufficient", baseForm: "self-sufficient", pos: "adj", definition_ch: "能自給；不依賴他人", sentence: "She became _______ after learning to grow her own food."},
+{id: 594, word: "sensational", baseForm: "sensational", pos: "adj", definition_ch: "轟動的；引人驚奇的", sentence: "The movie received _______ reviews from both critics and audiences."},
+{id: 595, word: "senseless", baseForm: "senseless", pos: "adj", definition_ch: "無意義的；不合理的", sentence: "The argument was _______ and wasted everyone's precious time."},
+{id: 596, word: "sensibility", baseForm: "sensibility", pos: "n", definition_ch: "感覺能力；感受力；鑑賞力", sentence: "Her _______ to art makes her paintings very expressive."},
+{id: 597, word: "sentimental", baseForm: "sentimental", pos: "adj", definition_ch: "感傷的；多愁善感的", sentence: "She felt _______ when looking at old family photographs."},
+{id: 598, word: "serene", baseForm: "serene", pos: "adj", definition_ch: "平靜的；安詳的", sentence: "The lake was _______ early in the morning, without any noise."},
+{id: 599, word: "serenity", baseForm: "serenity", pos: "n", definition_ch: "寧靜；平靜的狀態", sentence: "She enjoyed the _______ of the quiet morning by the lake."},
+{id: 600, word: "severity", baseForm: "severity", pos: "n", definition_ch: "嚴重性；嚴峻程度", sentence: "The _______ of the storm caused widespread damage in the city."},
+{id: 601, word: "shabby", baseForm: "shabby", pos: "adj", definition_ch: "破舊的；衣衫襤褸的", sentence: "He wore a/an _______ coat that looked old and worn out."},
+{id: 602, word: "shaken", baseForm: "shaken", pos: "adj", definition_ch: "震驚的；不安的", sentence: "She was visibly _______ after hearing the bad news yesterday."},
+{id: 603, word: "sharpen", baseForm: "sharpen", pos: "v", definition_ch: "使變鋒利；磨快", sentence: "I need to _______ my pencil before starting the drawing."},
+{id: 604, word: "shattered", baseForm: "shattered", pos: "adj", definition_ch: "破碎的；極度疲憊的", sentence: "After the long hike, she felt completely _______ and needed rest."},
+{id: 605, word: "shield", baseForm: "shield", pos: "n", definition_ch: "盾牌；防護物", sentence: "The knight raised his _______ to block the enemy’s arrow."},
+{id: 606, word: "short-sighted", baseForm: "short-sighted", pos: "adj", definition_ch: "目光短淺的；缺乏遠見的", sentence: "It is _______ to ignore the long-term consequences today."},
+{id: 607, word: "shrewd", baseForm: "shrewd", pos: "adj", definition_ch: "精明；敏銳", sentence: "She made a/an _______ decision to invest early in the company."},
+{id: 608, word: "shudder", baseForm: "shudder", pos: "v", definition_ch: "發抖；顫抖", sentence: "She began to _______ after hearing the eerie noise outside."},
+{id: 609, word: "side effect", baseForm: "side effect", pos: "n", definition_ch: "副作用", sentence: "Many patients experience a/an _______ after taking the new medication."},
+{id: 610, word: "sideways", baseForm: "sideways", pos: "adv", definition_ch: "向旁邊；側面地", sentence: "He looked _______ at the strange painting on the wall."},
+{id: 611, word: "simplification", baseForm: "simplification", pos: "n", definition_ch: "簡化", sentence: "The _______ of the instructions made the task much easier."},
+{id: 612, word: "sincerity", baseForm: "sincerity", pos: "n", definition_ch: "真誠；誠懇的態度或品質", sentence: "Her _______ in apologizing helped to mend their broken friendship."},
+{id: 613, word: "sip", baseForm: "sip", pos: "n", definition_ch: "啜飲；小口喝", sentence: "She took a small _______ of tea before speaking clearly."},
+{id: 614, word: "siren", baseForm: "siren", pos: "n", definition_ch: "警報器；警笛", sentence: "The fire truck's _______ alerted everyone to the emergency nearby."},
+{id: 615, word: "slap", baseForm: "slap", pos: "n", definition_ch: "一掌拍打的動作或聲音", sentence: "He gave a loud _______ to the table to get attention."},
+{id: 616, word: "slaughter", baseForm: "slaughter", pos: "n", definition_ch: "屠宰；大規模殺戮", sentence: "The _______ of animals provides meat for many different dishes."},
+{id: 617, word: "slender", baseForm: "slender", pos: "adj", definition_ch: "細長的；苗條的", sentence: "She has a/an _______ figure that looks very elegant in dresses."},
+{id: 618, word: "slim", baseForm: "slim", pos: "adj", definition_ch: "苗條的；纖細的", sentence: "She has a/an _______ chance of winning the competition this year."},
+{id: 619, word: "smoky", baseForm: "smoky", pos: "adj", definition_ch: "充滿煙霧的；有煙味的", sentence: "The kitchen was filled with a/an _______ smell after cooking."},
+{id: 620, word: "smoothly", baseForm: "smoothly", pos: "adv", definition_ch: "順利地；平穩地", sentence: "The meeting went _______ without any major problems today."},
+{id: 621, word: "snatch", baseForm: "snatch", pos: "v", definition_ch: "迅速抓取或奪取", sentence: "He tried to _______ the bag before the thief escaped."},
+{id: 622, word: "sniff", baseForm: "sniff", pos: "v", definition_ch: "用鼻子吸氣以聞氣味", sentence: "The dog began to _______ the ground for a hidden scent."},
+{id: 623, word: "snob", baseForm: "snob", pos: "n", definition_ch: "勢利眼；自命不凡者", sentence: "She avoided him because he acted like a complete _______."},
+{id: 624, word: "snobbish", baseForm: "snobbish", pos: "adj", definition_ch: "勢利的；自命不凡的", sentence: "Her _______ attitude made it hard for others to approach her."},
+{id: 625, word: "sober", baseForm: "sober", pos: "adj", definition_ch: "清醒的，未醉的", sentence: "She remained _______ throughout the entire party last night."},
+{id: 626, word: "socialism", baseForm: "socialism", pos: "n", definition_ch: "社會主義", sentence: "Many countries have debated the benefits and drawbacks of _______."},
+{id: 627, word: "solitary", baseForm: "solitary", pos: "adj", definition_ch: "孤獨的；獨自的", sentence: "He enjoyed a/an _______ walk in the quiet forest every morning."},
+{id: 628, word: "soothing", baseForm: "soothing", pos: "adj", definition_ch: "使人感到舒緩或安慰的", sentence: "The _______ music helped her relax after a long day."},
+{id: 629, word: "sorrow", baseForm: "sorrow", pos: "n", definition_ch: "悲傷；傷心", sentence: "She felt deep _______ after hearing the sad news yesterday."},
+{id: 630, word: "spade", baseForm: "spade", pos: "n", definition_ch: "一種用於挖土的鋤頭", sentence: "He used a/an _______ to dig a hole in the garden."},
+{id: 631, word: "spark", baseForm: "spark", pos: "n", definition_ch: "火花；火星", sentence: "A single _______ can start a large fire if conditions are dry."},
+{id: 632, word: "sparsely", baseForm: "sparsely", pos: "adv", definition_ch: "稀疏地；稀少地", sentence: "The village was _______ populated with only a few houses."},
+{id: 633, word: "spiritually", baseForm: "spiritually", pos: "adv", definition_ch: "在精神上；與靈性有關地", sentence: "She feels _______ connected to nature during her morning walks."},
+{id: 634, word: "spit", baseForm: "spit", pos: "v", definition_ch: "吐出唾液", sentence: "He tried not to _______ while talking to the teacher in class."},
+{id: 635, word: "splash", baseForm: "splash", pos: "n", definition_ch: "水花；濺起的水或液體", sentence: "The _______ of water startled the birds by the lake shore."},
+{id: 636, word: "splendour", baseForm: "splendour", pos: "n", definition_ch: "壯麗；輝煌", sentence: "The _______ of the palace amazed all the visitors instantly."},
+{id: 637, word: "spotless", baseForm: "spotless", pos: "adj", definition_ch: "一塵不染的；非常乾淨的", sentence: "Her kitchen was _______ after spending all morning cleaning."},
+{id: 638, word: "sprinkle", baseForm: "sprinkle", pos: "v", definition_ch: "灑；撒（少量的東西）", sentence: "Please _______ some salt on the salad before serving it."},
+{id: 639, word: "spur", baseForm: "spur", pos: "v", definition_ch: "激勵；促使某人採取行動", sentence: "The teacher's praise helped _______ the students to work harder."},
+{id: 640, word: "squander", baseForm: "squander", pos: "v", definition_ch: "浪費；揮霍", sentence: "Don't _______ your money on things you don't really need."},
+{id: 641, word: "squeak", baseForm: "squeak", pos: "v", definition_ch: "發出短促尖銳的聲音", sentence: "The mouse began to _______ when it was caught in the trap."},
+{id: 642, word: "squeaky", baseForm: "squeaky", pos: "adj", definition_ch: "發出尖銳吱吱聲的", sentence: "The old door made a loud _______ noise when opened slowly."},
+{id: 643, word: "stable", baseForm: "stable", pos: "n", definition_ch: "馬廄；牲畜的棚舍", sentence: "The horses were resting quietly inside the _______ after exercise."},
+{id: 644, word: "stagger", baseForm: "stagger", pos: "v", definition_ch: "蹣跚；搖搖晃晃地走路", sentence: "He began to _______ after drinking too much at the party."},
+{id: 645, word: "stain", baseForm: "stain", pos: "v", definition_ch: "弄髒；沾染汙漬", sentence: "Be careful not to _______ your clothes while eating the sauce."},
+{id: 646, word: "stamp", baseForm: "stamp", pos: "v", definition_ch: "用腳重重踩踏；蓋郵戳於", sentence: "Please _______ the letter before you send it to her."},
+{id: 647, word: "standpoint", baseForm: "standpoint", pos: "n", definition_ch: "觀點；立場", sentence: "From a teacher's _______, patience is very important in class."},
+{id: 648, word: "stardom", baseForm: "stardom", pos: "n", definition_ch: "明星地位", sentence: "She achieved _______ after starring in the popular movie."},
+{id: 649, word: "starvation", baseForm: "starvation", pos: "n", definition_ch: "飢餓；極度缺食", sentence: "Many people suffer from _______ during severe droughts and famines."},
+{id: 650, word: "stereotypical", baseForm: "stereotypical", pos: "adj", definition_ch: "刻板印象的；陳腔濫調的", sentence: "She rejected the _______ roles assigned to women in movies."},
+{id: 651, word: "stern", baseForm: "stern", pos: "adj", definition_ch: "嚴厲的；嚴肅的", sentence: "The teacher gave a/an _______ warning to the noisy students."},
+{id: 652, word: "stitch", baseForm: "stitch", pos: "n", definition_ch: "縫合傷口或布料的一針", sentence: "The nurse carefully placed a/an _______ to close the small wound."},
+{id: 653, word: "strain", baseForm: "strain", pos: "v", definition_ch: "拉緊；使緊張或過度使用", sentence: "Lifting heavy boxes can _______ your back if done incorrectly."},
+{id: 654, word: "stranded", baseForm: "stranded", pos: "adj", definition_ch: "擱淺的；無法離開某地的", sentence: "They were _______ on the island after their boat sank."},
+{id: 655, word: "strap", baseForm: "strap", pos: "n", definition_ch: "帶子；繫物用條", sentence: "Please fasten the _______ tightly before lifting the box."},
+{id: 656, word: "strategically", baseForm: "strategically", pos: "adv", definition_ch: "策略性地；有計劃地", sentence: "They _______ placed their stores near busy city centers."},
+{id: 657, word: "straw", baseForm: "straw", pos: "n", definition_ch: "稻草；乾草莖", sentence: "The farmer used _______ to feed the animals during winter."},
+{id: 658, word: "strenuous", baseForm: "strenuous", pos: "adj", definition_ch: "費力的；艱苦的", sentence: "She completed a/an _______ workout at the gym yesterday."},
+{id: 659, word: "striker", baseForm: "striker", pos: "n", definition_ch: "前鋒；攻擊手", sentence: "The _______ scored the winning goal in the final match."},
+{id: 660, word: "structured", baseForm: "structured", pos: "adj", definition_ch: "有組織的；有結構的", sentence: "The meeting followed a well-_______ and clear agenda today."},
+{id: 661, word: "stubbornness", baseForm: "stubbornness", pos: "n", definition_ch: "固執；頑固", sentence: "Her _______ prevented her from accepting any useful advice."},
+{id: 662, word: "stunned", baseForm: "stunned", pos: "adj", definition_ch: "震驚的；目瞪口呆的", sentence: "She was _______ by the unexpected news about her promotion."},
+{id: 663, word: "stupidity", baseForm: "stupidity", pos: "n", definition_ch: "愚蠢；缺乏智慧或判斷力", sentence: "His constant _______ caused problems for the entire team."},
+{id: 664, word: "subconsciously", baseForm: "subconsciously", pos: "adv", definition_ch: "潛意識地；在無意識中", sentence: "She _______ smiled when she saw her old friend again."},
+{id: 665, word: "succumb", baseForm: "succumb", pos: "v", definition_ch: "屈服；倒下", sentence: "Many patients eventually _______ to the severe illness despite treatment."},
+{id: 666, word: "sufferer", baseForm: "sufferer", pos: "n", definition_ch: "受苦者；患病者", sentence: "The _______ sought help to manage chronic pain effectively."},
+{id: 667, word: "summon", baseForm: "summon", pos: "v", definition_ch: "召喚；傳喚", sentence: "The manager will _______ all employees for an important meeting tomorrow."},
+{id: 668, word: "superficial", baseForm: "superficial", pos: "adj", definition_ch: "表面的；膚淺的", sentence: "Her knowledge of the topic is quite _______ and needs improvement."},
+{id: 669, word: "superficially", baseForm: "superficially", pos: "adv", definition_ch: "表面上地；膚淺地", sentence: "The problem was only _______ solved and needs more attention."},
+{id: 670, word: "superfluous", baseForm: "superfluous", pos: "adj", definition_ch: "多餘的；不必要的", sentence: "The report contained many _______ details that confused readers."},
+{id: 671, word: "superiority", baseForm: "superiority", pos: "n", definition_ch: "優越；優勢", sentence: "The team's _______ was clear after winning every match easily."},
+{id: 672, word: "supplementary", baseForm: "supplementary", pos: "adj", definition_ch: "補充的；追加的", sentence: "The teacher provided _______ materials to help students understand better."},
+{id: 673, word: "surpass", baseForm: "surpass", pos: "v", definition_ch: "超越；勝過", sentence: "Her achievements _______ all expectations in the competition."},
+{id: 674, word: "suspense", baseForm: "suspense", pos: "n", definition_ch: "懸念；緊張不安", sentence: "The movie kept me in _______ until the very last scene."},
+{id: 675, word: "sustainability", baseForm: "sustainability", pos: "n", definition_ch: "永續性；持續能力", sentence: "Companies should focus on _______ to protect the environment."},
+{id: 676, word: "swift", baseForm: "swift", pos: "adj", definition_ch: "迅速的；敏捷的", sentence: "The _______ runner finished the race far ahead of others."},
+{id: 677, word: "swiftly", baseForm: "swiftly", pos: "adv", definition_ch: "迅速地；敏捷地", sentence: "She _______ completed the task before the deadline approached."},
+{id: 678, word: "syllabus", baseForm: "syllabus", pos: "n", definition_ch: "課程大綱；教學計劃", sentence: "The teacher handed out the _______ on the first day of class."},
+{id: 679, word: "sympathize", baseForm: "sympathize", pos: "v", definition_ch: "同情；共鳴", sentence: "I _______ with you during this difficult time of loss."},
+{id: 680, word: "synonym", baseForm: "synonym", pos: "n", definition_ch: "同義詞", sentence: "a/an _______ can help you avoid repeating the same word."},
+{id: 681, word: "synonymous", baseForm: "synonymous", pos: "adj", definition_ch: "同義的；意義相同的", sentence: "Her name is _______ with excellent customer service."},
+{id: 682, word: "systematically", baseForm: "systematically", pos: "adv", definition_ch: "有系統地；有條理地", sentence: "She _______ organized her notes before the big exam."},
+{id: 683, word: "tact", baseForm: "tact", pos: "n", definition_ch: "圓滑；機智", sentence: "She handled the difficult situation with great _______ and care."},
+{id: 684, word: "tactful", baseForm: "tactful", pos: "adj", definition_ch: "圓滑的；機智的；得體的", sentence: "She was _______ when discussing sensitive topics with her friends."},
+{id: 685, word: "tactless", baseForm: "tactless", pos: "adj", definition_ch: "不得體；不圓滑", sentence: "His _______ comment upset everyone at the meeting yesterday."},
+{id: 686, word: "talks", baseForm: "talks", pos: "n", definition_ch: "談判；會談", sentence: "The _______ between the two countries lasted several hours yesterday."},
+{id: 687, word: "tangible", baseForm: "tangible", pos: "adj", definition_ch: "可觸摸的；有形的；明確的", sentence: "The team needed _______ results to prove their project’s success."},
+{id: 688, word: "tasteful", baseForm: "tasteful", pos: "adj", definition_ch: "有品味的；高雅的", sentence: "She decorated her house in a very _______ and elegant style."},
+{id: 689, word: "tasteless", baseForm: "tasteless", pos: "adj", definition_ch: "無味的；缺乏味道的", sentence: "The soup was too bland and _______ to enjoy at dinner."},
+{id: 690, word: "technically", baseForm: "technically", pos: "adv", definition_ch: "技術上；專業地", sentence: "_______, the project is not finished until all tests pass."},
+{id: 691, word: "tenderness", baseForm: "tenderness", pos: "n", definition_ch: "溫柔；體貼", sentence: "She showed great _______ when caring for the injured bird."},
+{id: 692, word: "territorial", baseForm: "territorial", pos: "adj", definition_ch: "領土的；有領土性的", sentence: "Many animals display _______ behavior to protect their space."},
+{id: 693, word: "theoretically", baseForm: "theoretically", pos: "adv", definition_ch: "理論上；根據理論而言", sentence: "_______, this method should improve the machine's efficiency."},
+{id: 694, word: "thinker", baseForm: "thinker", pos: "n", definition_ch: "思想家；深思熟慮的人", sentence: "She is a thoughtful _______ who always questions common beliefs."},
+{id: 695, word: "thoughtfully", baseForm: "thoughtfully", pos: "adv", definition_ch: "深思熟慮地；體貼地", sentence: "She _______ considered all options before making a decision."},
+{id: 696, word: "thoughtless", baseForm: "thoughtless", pos: "adj", definition_ch: "粗心；不體貼", sentence: "It was _______ of him to ignore her feelings completely."},
+{id: 697, word: "thrill", baseForm: "thrill", pos: "v", definition_ch: "使興奮；使激動", sentence: "The roller coaster ride will _______ you with its fast speed."},
+{id: 698, word: "thriving", baseForm: "thriving", pos: "adj", definition_ch: "興旺的；繁榮的", sentence: "The _______ business expanded quickly due to high customer demand."},
+{id: 699, word: "throne", baseForm: "throne", pos: "n", definition_ch: "王座；君主的寶座", sentence: "The king sat proudly on his golden _______ during the ceremony."},
+{id: 700, word: "tick", baseForm: "tick", pos: "v", definition_ch: "發出滴答聲；標記記號", sentence: "The clock will _______ loudly in the quiet room tonight."},
+{id: 701, word: "timid", baseForm: "timid", pos: "adj", definition_ch: "膽小的；害羞的", sentence: "The _______ child hesitated before speaking to the teacher."},
+{id: 702, word: "tire", baseForm: "tire", pos: "v", definition_ch: "使疲倦；使厭倦", sentence: "Long hours of work can easily _______ anyone quickly."},
+{id: 703, word: "tiresome", baseForm: "tiresome", pos: "adj", definition_ch: "令人感到疲倦或厭煩的", sentence: "The long meeting was _______ but necessary for the project."},
+{id: 704, word: "toddler", baseForm: "toddler", pos: "n", definition_ch: "學步幼兒", sentence: "The _______ happily played with colorful building blocks today."},
+{id: 705, word: "torrential", baseForm: "torrential", pos: "adj", definition_ch: "傾盆大雨般的猛烈", sentence: "The _______ rain caused flooding across the entire city last night."},
+{id: 706, word: "totalitarian", baseForm: "totalitarian", pos: "adj", definition_ch: "極權主義的", sentence: "The _______ regime controlled all aspects of citizens' lives."},
+{id: 707, word: "toughness", baseForm: "toughness", pos: "n", definition_ch: "堅韌；強韌的品質或能力", sentence: "Her _______ helped her overcome many difficult challenges."},
+{id: 708, word: "tractor", baseForm: "tractor", pos: "n", definition_ch: "拖拉機", sentence: "The farmer used a/an _______ to plow the large field quickly."},
+{id: 709, word: "trader", baseForm: "trader", pos: "n", definition_ch: "商人；從事買賣的人", sentence: "The _______ bought and sold goods at the busy market every day."},
+{id: 710, word: "tragically", baseForm: "tragically", pos: "adv", definition_ch: "悲慘地；不幸地", sentence: "The hero _______ lost his life in the final battle."},
+{id: 711, word: "tranquility", baseForm: "tranquility", pos: "n", definition_ch: "寧靜；平靜的狀態", sentence: "She enjoyed the _______ of the quiet countryside every weekend."},
+{id: 712, word: "transplant", baseForm: "transplant", pos: "n", definition_ch: "移植手術；移植物", sentence: "The patient waited anxiously for the organ _______ to succeed."},
+{id: 713, word: "trash", baseForm: "trash", pos: "n", definition_ch: "垃圾；廢棄物", sentence: "Please take out the _______ before the garbage truck arrives."},
+{id: 714, word: "traumatic", baseForm: "traumatic", pos: "adj", definition_ch: "創傷的；痛苦的", sentence: "The car accident was a/an _______ experience for everyone involved."},
+{id: 715, word: "tread", baseForm: "tread", pos: "v", definition_ch: "踩踏；行走於某物上", sentence: "Be careful how you _______ on the fragile wooden floorboards."},
+{id: 716, word: "treasure", baseForm: "treasure", pos: "v", definition_ch: "珍藏；珍視", sentence: "She treasures the old letters from her grandmother dearly."},
+{id: 717, word: "treat", baseForm: "treat", pos: "n", definition_ch: "款待；請客；享受的事物", sentence: "She brought a special _______ for everyone at the party."},
+{id: 718, word: "trilogy", baseForm: "trilogy", pos: "n", definition_ch: "三部曲；三部作品", sentence: "The movie _______ was praised for its exciting story and characters."},
+{id: 719, word: "troops", baseForm: "troops", pos: "n", definition_ch: "軍隊；部隊", sentence: "The _______ arrived at the base early in the morning."},
+{id: 720, word: "troublesome", baseForm: "troublesome", pos: "adj", definition_ch: "麻煩的；令人困擾的", sentence: "The _______ problem was finally solved by the expert team."},
+{id: 721, word: "turbulent", baseForm: "turbulent", pos: "adj", definition_ch: "動盪的；騷亂的；狂暴的", sentence: "The airplane experienced _______ weather during the entire flight."},
+{id: 722, word: "turmoil", baseForm: "turmoil", pos: "n", definition_ch: "混亂；騷動；動盪", sentence: "The country was in _______ after the sudden political upheaval."},
+{id: 723, word: "twisted", baseForm: "twisted", pos: "adj", definition_ch: "扭曲的；彎曲的", sentence: "The _______ branches of the old tree looked very unusual."},
+{id: 724, word: "unaffected", baseForm: "unaffected", pos: "adj", definition_ch: "不受影響的；未改變的", sentence: "She remained _______ by the criticism and continued her work."},
+{id: 725, word: "unanimous", baseForm: "unanimous", pos: "adj", definition_ch: "全體一致的；無異議的", sentence: "The committee reached a/an _______ decision after long discussions."},
+{id: 726, word: "unanimously", baseForm: "unanimously", pos: "adv", definition_ch: "一致地；全體同意地", sentence: "The committee _______ approved the new environmental policy today."},
+{id: 727, word: "unattainable", baseForm: "unattainable", pos: "adj", definition_ch: "無法達到的；難以實現的", sentence: "Her dream of becoming a movie star seemed completely _______."},
+{id: 728, word: "unavoidably", baseForm: "unavoidably", pos: "adv", definition_ch: "不可避免地；必然地", sentence: "Delays will _______ affect the project's completion time."},
+{id: 729, word: "unbalanced", baseForm: "unbalanced", pos: "adj", definition_ch: "不平衡的；失去平衡的", sentence: "The _______ ladder caused him to fall and hurt himself."},
+{id: 730, word: "unbiased", baseForm: "unbiased", pos: "adj", definition_ch: "不帶偏見的；公正的", sentence: "The judge must remain _______ during the entire trial."},
+{id: 731, word: "unconditional", baseForm: "unconditional", pos: "adj", definition_ch: "無條件的；不受限制的", sentence: "She gave her _______ support during the difficult times."},
+{id: 732, word: "unconsciously", baseForm: "unconsciously", pos: "adv", definition_ch: "無意識地；不自覺地", sentence: "She _______ smiled while recalling the happy memory."},
+{id: 733, word: "undeniably", baseForm: "undeniably", pos: "adv", definition_ch: "不可否認地；明顯地", sentence: "She is _______ the best candidate for the job position."},
+{id: 734, word: "underdeveloped", baseForm: "underdeveloped", pos: "adj", definition_ch: "發展不完全的；欠發達的", sentence: "Many _______ countries struggle with poverty and lack resources."},
+{id: 735, word: "undertaking", baseForm: "undertaking", pos: "n", definition_ch: "承諾；任務；事業", sentence: "Starting a new business is a challenging but rewarding _______."},
+{id: 736, word: "underway", baseForm: "underway", pos: "adj", definition_ch: "正在進行的；已經開始的", sentence: "The construction of the new bridge is _______ this month."},
+{id: 737, word: "undesirable", baseForm: "undesirable", pos: "adj", definition_ch: "不受歡迎的；令人不快的", sentence: "The company avoided hiring candidates with _______ habits."},
+{id: 738, word: "undeveloped", baseForm: "undeveloped", pos: "adj", definition_ch: "未開發的；發展不完全的", sentence: "The region remains largely _______ despite recent investments."},
+{id: 739, word: "undoubted", baseForm: "undoubted", pos: "adj", definition_ch: "無可置疑的；確鑿的", sentence: "She is a/an _______ expert in her scientific field."},
+{id: 740, word: "undue", baseForm: "undue", pos: "adj", definition_ch: "過度的；不適當的", sentence: "She showed _______ concern for things beyond her control."},
+{id: 741, word: "unethical", baseForm: "unethical", pos: "adj", definition_ch: "不道德的；違反倫理的", sentence: "It is _______ to lie during an important business meeting."},
+{id: 742, word: "uneven", baseForm: "uneven", pos: "adj", definition_ch: "不平坦的；凹凸不平的", sentence: "The road was _______, making it difficult to ride a bicycle safely."},
+{id: 743, word: "uneventful", baseForm: "uneventful", pos: "adj", definition_ch: "平凡的；無重大事件的", sentence: "The meeting was _______ and finished earlier than expected."},
+{id: 744, word: "unfavourable", baseForm: "unfavourable", pos: "adj", definition_ch: "不利的；不適合的", sentence: "The team faced _______ weather during the outdoor match."},
+{id: 745, word: "unimaginable", baseForm: "unimaginable", pos: "adj", definition_ch: "難以想像的；不可思議的", sentence: "The damage caused by the storm was truly _______ to everyone."},
+{id: 746, word: "uninhabited", baseForm: "uninhabited", pos: "adj", definition_ch: "無人居住的；無人棲息的", sentence: "The island remained _______ due to its harsh climate conditions."},
+{id: 747, word: "unload", baseForm: "unload", pos: "v", definition_ch: "卸下（貨物、行李等）", sentence: "They need to _______ the truck before it starts raining."},
+{id: 748, word: "unrest", baseForm: "unrest", pos: "n", definition_ch: "動盪；騷亂", sentence: "The government struggled to control the _______ in the capital city."},
+{id: 749, word: "unscrupulous", baseForm: "unscrupulous", pos: "adj", definition_ch: "不道德的；無良的", sentence: "The _______ businessman lied to customers to make more money."},
+{id: 750, word: "unsustainable", baseForm: "unsustainable", pos: "adj", definition_ch: "無法持續的；不可維持的", sentence: "The company’s current growth rate is clearly _______."},
+{id: 751, word: "unwind", baseForm: "unwind", pos: "v", definition_ch: "放鬆；解開纏繞", sentence: "After work, I like to _______ by reading a good book."},
+{id: 752, word: "unwise", baseForm: "unwise", pos: "adj", definition_ch: "不明智的；缺乏判斷力的", sentence: "It was _______ to ignore the weather warnings before hiking."},
+{id: 753, word: "uphill", baseForm: "uphill", pos: "adv", definition_ch: "向上坡地；費力地向上", sentence: "They had to walk _______ for several miles after the rain."},
+{id: 754, word: "upkeep", baseForm: "upkeep", pos: "n", definition_ch: "維護費；保養工作", sentence: "The _______ of the old house requires regular repairs and cleaning."},
+{id: 755, word: "urge", baseForm: "urge", pos: "n", definition_ch: "強烈的慾望或衝動", sentence: "She felt a sudden _______ to call her old friend immediately."},
+{id: 756, word: "utter", baseForm: "utter", pos: "adj", definition_ch: "完全的；徹底的", sentence: "The movie was a/an _______ disappointment despite high expectations."},
+{id: 757, word: "utter", baseForm: "utter", pos: "v", definition_ch: "說出；發出聲音", sentence: "She could not _______ a single word during the meeting."},
+{id: 758, word: "vaccinate", baseForm: "vaccinate", pos: "v", definition_ch: "接種疫苗以預防疾病", sentence: "Doctors recommend vaccinating children to protect them from serious illness."},
+{id: 759, word: "vaccination", baseForm: "vaccination", pos: "n", definition_ch: "疫苗接種", sentence: "_______ helps protect people from dangerous infectious diseases."},
+{id: 760, word: "vaccine", baseForm: "vaccine", pos: "n", definition_ch: "疫苗；預防疾病藥劑", sentence: "The _______ helps protect people from dangerous infectious diseases."},
+{id: 761, word: "vaguely", baseForm: "vaguely", pos: "adv", definition_ch: "模糊地；不清楚地", sentence: "I _______ remember meeting her at the conference last year."},
+{id: 762, word: "vain", baseForm: "vain", pos: "adj", definition_ch: "自負的；虛榮的", sentence: "She was _______ about her appearance and always admired herself."},
+{id: 763, word: "vandalism", baseForm: "vandalism", pos: "n", definition_ch: "蓄意破壞行為", sentence: "The school installed cameras to prevent _______ on the premises."},
+{id: 764, word: "vanity", baseForm: "vanity", pos: "n", definition_ch: "虛榮心；自負", sentence: "Her _______ made her spend hours looking in the mirror daily."},
+{id: 765, word: "velvet", baseForm: "velvet", pos: "n", definition_ch: "絲絨布料", sentence: "She wore a beautiful red _______ dress to the party."},
+{id: 766, word: "versatile", baseForm: "versatile", pos: "adj", definition_ch: "多才多藝的；多功能的", sentence: "She is a/an _______ artist who excels in painting and sculpture."},
+{id: 767, word: "virgin", baseForm: "virgin", pos: "adj", definition_ch: "未經性行為的；處女的", sentence: "She proudly described herself as a/an _______ before marriage."},
+{id: 768, word: "virgin", baseForm: "virgin", pos: "n", definition_ch: "處女；未經性行為者", sentence: "The story tells of a/an _______ who saves her village with courage."},
+{id: 769, word: "visibly", baseForm: "visibly", pos: "adv", definition_ch: "明顯地；可見地", sentence: "She was _______ upset after hearing the bad news yesterday."},
+{id: 770, word: "vitality", baseForm: "vitality", pos: "n", definition_ch: "生命力；活力", sentence: "Her _______ helped her recover quickly from the illness."},
+{id: 771, word: "vitally", baseForm: "vitally", pos: "adv", definition_ch: "極其重要地；關鍵地", sentence: "It is _______ important to finish the project on time."},
+{id: 772, word: "vivacious", baseForm: "vivacious", pos: "adj", definition_ch: "活潑的；有生氣的", sentence: "She has a/an _______ personality that brightens every room."},
+{id: 773, word: "vocation", baseForm: "vocation", pos: "n", definition_ch: "職業；天職", sentence: "She believes teaching is her true _______ in life."},
+{id: 774, word: "vocational", baseForm: "vocational", pos: "adj", definition_ch: "職業的；職業訓練的", sentence: "She enrolled in a/an _______ course to learn practical skills."},
+{id: 775, word: "voice", baseForm: "voice", pos: "v", definition_ch: "表達；說出", sentence: "She raised her _______ to be heard over the noisy crowd."},
+{id: 776, word: "voluntarily", baseForm: "voluntarily", pos: "adv", definition_ch: "自願地；自發地", sentence: "She _______ helped the elderly man cross the busy street."},
+{id: 777, word: "vomit", baseForm: "vomit", pos: "v", definition_ch: "嘔吐；吐出胃中物", sentence: "She felt sick and had to _______ after eating spoiled food."},
+{id: 778, word: "voter", baseForm: "voter", pos: "n", definition_ch: "有投票權的人；選民", sentence: "Every _______ should participate in the upcoming local election."},
+{id: 779, word: "vow", baseForm: "vow", pos: "n", definition_ch: "誓言；鄭重的承諾", sentence: "They made a/an _______ to always support each other through difficulties."},
+{id: 780, word: "wary", baseForm: "wary", pos: "adj", definition_ch: "小心翼翼的；謹慎的", sentence: "She was _______ of strangers approaching her in the dark."},
+{id: 781, word: "weary", baseForm: "weary", pos: "adj", definition_ch: "疲倦的；感到厭倦的", sentence: "She felt _______ after working long hours without a break."},
+{id: 782, word: "weep", baseForm: "weep", pos: "v", definition_ch: "哭泣；流淚", sentence: "She began to _______ quietly after hearing the sad news."},
+{id: 783, word: "whereabouts", baseForm: "whereabouts", pos: "adv", definition_ch: "在哪裡；行蹤所在", sentence: "The police are still searching for his exact _______ today."},
+{id: 784, word: "whim", baseForm: "whim", pos: "n", definition_ch: "一時興致；突發念頭", sentence: "She bought the dress on a/an _______ without much thought."},
+{id: 785, word: "wholeheartedly", baseForm: "wholeheartedly", pos: "adv", definition_ch: "全心全意地；真誠地", sentence: "She _______ supports the new environmental protection policies."},
+{id: 786, word: "wicked", baseForm: "wicked", pos: "adj", definition_ch: "邪惡的；壞的", sentence: "The _______ witch cast a spell on the helpless village children."},
+{id: 787, word: "wield", baseForm: "wield", pos: "v", definition_ch: "揮舞；運用", sentence: "She can _______ great influence over the company's decisions."},
+{id: 788, word: "wilderness", baseForm: "wilderness", pos: "n", definition_ch: "荒野；自然未開發地區", sentence: "They spent a week camping alone in the vast _______."},
+{id: 789, word: "wildly", baseForm: "wildly", pos: "adv", definition_ch: "猛烈地；狂暴地", sentence: "The fans cheered _______ when the team scored the winning goal."},
+{id: 790, word: "willpower", baseForm: "willpower", pos: "n", definition_ch: "意志力；自我控制的能力", sentence: "She used her _______ to resist eating unhealthy snacks."},
+{id: 791, word: "wink", baseForm: "wink", pos: "v", definition_ch: "眨一隻眼睛", sentence: "He gave her a quick _______ to show his approval."},
+{id: 792, word: "withdrawn", baseForm: "withdrawn", pos: "adj", definition_ch: "孤僻的；不愛與人交往的", sentence: "After moving to a new school, she became very _______ and quiet."},
+{id: 793, word: "withstand", baseForm: "withstand", pos: "v", definition_ch: "經得起；抗拒", sentence: "The building can _______ strong winds during the storm."},
+{id: 794, word: "woodland", baseForm: "woodland", pos: "n", definition_ch: "林地；樹林區", sentence: "Many animals find shelter and food in the dense _______ nearby."},
+{id: 795, word: "workaholic", baseForm: "workaholic", pos: "n", definition_ch: "工作狂", sentence: "My uncle is a/an _______ who rarely takes a day off."},
+{id: 796, word: "worthless", baseForm: "worthless", pos: "adj", definition_ch: "無價值的；毫無用處的", sentence: "The broken phone is completely _______ and cannot be repaired."},
+{id: 797, word: "would-be", baseForm: "would-be", pos: "adj", definition_ch: "有志的；準備成為的", sentence: "The _______ artist practiced painting every single day diligently."},
+{id: 798, word: "wreck", baseForm: "wreck", pos: "n", definition_ch: "殘骸；破壞的船隻或車輛", sentence: "The divers explored the _______ at the bottom of the sea."},
+{id: 799, word: "wreck", baseForm: "wreck", pos: "v", definition_ch: "破壞；使毀壞", sentence: "The storm wrecked the old ship near the rocky coast."},
+{id: 800, word: "wreckage", baseForm: "wreckage", pos: "n", definition_ch: "殘骸；破壞後的殘餘物", sentence: "The rescue team searched the _______ after the plane crash."},
+{id: 801, word: "wretched", baseForm: "wretched", pos: "adj", definition_ch: "悲慘的；可憐的", sentence: "She lived in a/an _______ house with no electricity or water."},
+{id: 802, word: "wrinkle", baseForm: "wrinkle", pos: "n", definition_ch: "皺紋；細小的皺褶", sentence: "She noticed a small _______ on her favorite shirt this morning."},
+{id: 803, word: "wrinkled", baseForm: "wrinkled", pos: "adj", definition_ch: "有皺紋的；起皺的", sentence: "The old man had a/an _______ face full of stories."},
+{id: 804, word: "xenophobia", baseForm: "xenophobia", pos: "n", definition_ch: "排外恐懼症", sentence: "_______ often leads to unfair treatment of immigrants and strangers."},
+];
+
+    // Data already preprocessed
+
+
+    const startScreen = document.getElementById('start-screen');
+    const quizScreen = document.getElementById('quiz-screen');
+    const endScreen = document.getElementById('end-screen');
+    const questionCounter = document.getElementById('question-counter');
+    const scoreCounter = document.getElementById('score-counter');
+    const questionText = document.getElementById('question-text');
+    const optionsContainer = document.getElementById('options-container');
+    const feedbackContainer = document.getElementById('feedback-container');
+    const nextBtn = document.getElementById('next-btn');
+    const finalScore = document.getElementById('final-score');
+    const endComment = document.getElementById('end-comment');
+    const restartBtn = document.getElementById('restart-btn');
+    const returnBtn = document.getElementById('return-btn');
+    const revisionContainer = document.getElementById('revision-container');
+    const revisionList = document.getElementById('revision-list');
+
+    let currentQuestions = [];
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let questionsToAttempt = 0;
+    let answeredIncorrectly = false;
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    function startGame(num) {
+        questionsToAttempt = Math.min(num, questionBank.length);
+        score = 0;
+        currentQuestionIndex = 0;
+        const shuffledBank = shuffleArray([...questionBank]);
+        currentQuestions = shuffledBank.slice(0, questionsToAttempt);
+
+        revisionContainer.style.display = 'none';
+        startScreen.style.display = 'none';
+        endScreen.style.display = 'none';
+        quizScreen.style.display = 'block';
+
+        displayQuestion();
+    }
+
+    function displayQuestion() {
+        answeredIncorrectly = false;
+        feedbackContainer.textContent = '';
+        nextBtn.style.display = 'none';
+        nextBtn.textContent = "Next Question"; // Reset default text
+        const question = currentQuestions[currentQuestionIndex];
+
+        questionCounter.textContent = `Question: ${currentQuestionIndex + 1} / ${questionsToAttempt}`;
+        scoreCounter.textContent = `Score: ${score}`;
+
+        const blankSpan = `<span class="blank"></span>`;
+        const sentence = question.sentence.replace('_______', blankSpan);
+        questionText.innerHTML = sentence;
+
+        // Check if the blank is at the start of the sentence
+        const cleanSentence = question.sentence.trim().replace(/^['"“]+/, '');
+        const isStartOfSentence = cleanSentence.startsWith('_______') || cleanSentence.startsWith('A/An _______');
+
+        const correctOption = question;
+        const distractors = getDistractors(correctOption);
+
+        const options = shuffleArray([correctOption, ...distractors]);
+
+        optionsContainer.innerHTML = '';
+        options.forEach(option => {
+            const button = document.createElement('button');
+            
+            // If the blank is at the start of the sentence, capitalize the first letter of ALL options
+            let displayWord = option.word;
+            if (isStartOfSentence) {
+                displayWord = displayWord.charAt(0).toUpperCase() + displayWord.slice(1);
+            }
+
+            button.textContent = displayWord;
+            button.classList.add('option-btn');
+            button.dataset.word = option.word; // Keep original word for checking correctness
+            button.dataset.baseForm = option.baseForm;
+            button.dataset.pos = option.pos;
+            button.dataset.definition = option.definition_ch;
+            button.addEventListener('click', checkAnswer);
+            optionsContainer.appendChild(button);
+        });
+    }
+
+    function conjugate(base, inflection) {
+        if (!inflection || base === inflection) return base;
+
+        const vowels = "aeiou";
+        const lastChar = base.slice(-1);
+        const secondLastChar = base.slice(-2, -1);
+
+        if (inflection === 's') {
+            if (lastChar === 'y' && !vowels.includes(secondLastChar)) {
+                return base.slice(0, -1) + 'ies';
+            }
+            if (['s', 'x', 'z'].includes(lastChar) || ['sh', 'ch'].includes(base.slice(-2))) {
+                return base + 'es';
+            }
+            return base + 's';
+        }
+        if (inflection === 'd' || inflection === 'ed') {
+            if (lastChar === 'e') {
+                return base + 'd';
+            }
+            if (lastChar === 'y' && !vowels.includes(secondLastChar)) {
+                return base.slice(0, -1) + 'ied';
+            }
+            if (base.length > 1 && !vowels.includes(lastChar) && vowels.includes(secondLastChar) && !['w', 'x', 'y'].includes(lastChar)) {
+                 const thirdLastChar = base.slice(-3,-2);
+                 if (base.length === 2 || !vowels.includes(thirdLastChar)) {
+                    return base + lastChar + 'ed';
+                 }
+            }
+            return base + 'ed';
+        }
+        if (inflection === 'ing') {
+             if (base.endsWith('ie')) {
+                return base.slice(0, -2) + 'ying';
+            }
+            if (lastChar === 'e' && !base.endsWith('ee')) {
+                return base.slice(0, -1) + 'ing';
+            }
+            if (base.length > 1 && !vowels.includes(lastChar) && vowels.includes(secondLastChar) && !['w', 'x', 'y'].includes(lastChar)) {
+                const thirdLastChar = base.slice(-3,-2);
+                if (base.length === 2 || !vowels.includes(thirdLastChar)) {
+                   return base + lastChar + 'ing';
+                }
+            }
+            return base + 'ing';
+        }
+
+        return base;
+    }
+
+    function getDistractors(correctOption) {
+        const distractors = [];
+        const usedBaseForms = new Set([correctOption.baseForm]);
+        let inflection = '';
+
+        // Determine inflection based on the difference between the word in sentence and base form
+        if (correctOption.word !== correctOption.baseForm) {
+            if (correctOption.pos.includes('v') || correctOption.pos.includes('n')) {
+                if (correctOption.word.endsWith('s') && !correctOption.word.endsWith('ss')) inflection = 's';
+                else if (correctOption.word.endsWith('ed')) inflection = 'ed';
+                else if (correctOption.word.endsWith('d') && !correctOption.baseForm.endsWith('d')) inflection = 'd';
+                else if (correctOption.word.endsWith('ing')) inflection = 'ing';
+            }
+        }
+
+        // Split candidates into same POS and different POS
+        // We filter out the correct word base form from both
+        const allCandidates = questionBank.filter(q => q.baseForm !== correctOption.baseForm);
+        
+        let samePosCandidates = allCandidates.filter(q => q.pos === correctOption.pos);
+        let otherCandidates = allCandidates.filter(q => q.pos !== correctOption.pos);
+        
+        shuffleArray(samePosCandidates);
+        shuffleArray(otherCandidates);
+        
+        const correctFirstChar = correctOption.word.charAt(0).toLowerCase();
+        const usedFirstChars = new Set([correctFirstChar]);
+
+        function addDistractor(candidate, shouldConjugate) {
+             const distractorBaseForm = candidate.baseForm;
+             let finalWord = distractorBaseForm;
+             
+             if (shouldConjugate) {
+                 finalWord = conjugate(distractorBaseForm, inflection);
+             }
+             
+             distractors.push({
+                word: finalWord,
+                baseForm: distractorBaseForm,
+                pos: candidate.pos,
+                definition_ch: candidate.definition_ch
+            });
+            usedBaseForms.add(distractorBaseForm);
+            usedFirstChars.add(distractorBaseForm.charAt(0).toLowerCase());
+        }
+
+        // Phase 1: Same POS, Unique Start Char
+        for (const candidate of samePosCandidates) {
+            if (distractors.length >= 3) break;
+            const char = candidate.baseForm.charAt(0).toLowerCase();
+            if (!usedFirstChars.has(char)) {
+                addDistractor(candidate, true);
+            }
+        }
+
+        // Phase 2: Same POS, Any Start Char
+        if (distractors.length < 3) {
+            for (const candidate of samePosCandidates) {
+                if (distractors.length >= 3) break;
+                if (!usedBaseForms.has(candidate.baseForm)) {
+                    addDistractor(candidate, true);
+                }
+            }
+        }
+
+        // Phase 3: Other POS, Unique Start Char
+        if (distractors.length < 3) {
+            for (const candidate of otherCandidates) {
+                if (distractors.length >= 3) break;
+                const char = candidate.baseForm.charAt(0).toLowerCase();
+                if (!usedFirstChars.has(char)) {
+                    addDistractor(candidate, false); // Do not conjugate different POS
+                }
+            }
+        }
+
+        // Phase 4: Other POS, Any Start Char
+        if (distractors.length < 3) {
+            for (const candidate of otherCandidates) {
+                if (distractors.length >= 3) break;
+                if (!usedBaseForms.has(candidate.baseForm)) {
+                    addDistractor(candidate, false);
+                }
+            }
+        }
+
+        return distractors;
+    }
+
+    function checkAnswer(e) {
+        const selectedButton = e.target;
+        const selectedWord = selectedButton.dataset.word;
+        const correctWord = currentQuestions[currentQuestionIndex].word;
+
+        const baseForm = selectedButton.dataset.baseForm;
+        const pos = selectedButton.dataset.pos;
+        const definition = selectedButton.dataset.definition;
+        feedbackContainer.textContent = `${baseForm}: (${pos}) ${definition}`;
+
+        if (selectedWord === correctWord) {
+            selectedButton.classList.add('correct');
+            if (!answeredIncorrectly) {
+                score++;
+                scoreCounter.textContent = `Score: ${score}`;
+            }
+            disableOptions();
+            
+            // Change button text if it's the last question
+            if (currentQuestionIndex === questionsToAttempt - 1) {
+                nextBtn.textContent = "Finish Quiz";
+            } else {
+                nextBtn.textContent = "Next Question";
+            }
+            
+            nextBtn.style.display = 'inline-block';
+        } else {
+            selectedButton.classList.add('incorrect');
+            selectedButton.disabled = true;
+            answeredIncorrectly = true;
+        }
+    }
+
+    function disableOptions() {
+        Array.from(optionsContainer.children).forEach(button => {
+            button.disabled = true;
+        });
+    }
+
+    function handleNextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questionsToAttempt) {
+            displayQuestion();
+        } else {
+            endGame();
+        }
+    }
+
+    function endGame() {
+        quizScreen.style.display = 'none';
+        endScreen.style.display = 'block';
+
+        finalScore.textContent = `${score} / ${questionsToAttempt}`;
+        const percentage = (score / questionsToAttempt) * 100;
+
+        let comment = '';
+        if (percentage === 100) {
+            comment = "Flawless! You've mastered these words. Well done!";
+        } else if (percentage >= 80) {
+            comment = "Excellent work! You have a strong command of these words.";
+        } else if (percentage >= 60) {
+            comment = "Good job! A little more revision will make you an expert.";
+        } else if (percentage >= 40) {
+            comment = "Solid effort. Keep practicing to get more familiar with the words.";
+        } else {
+            comment = "A good start. Do some revision and try again to boost your score!";
+        }
+        endComment.textContent = comment;
+
+        displayRevisionList();
+    }
+
+    function displayRevisionList() {
+        revisionContainer.style.display = 'block';
+        revisionList.innerHTML = '';
+
+        currentQuestions.forEach(question => {
+            const item = document.createElement('div');
+            item.classList.add('revision-item');
+
+            let displayWord = question.word;
+            if (question.sentence.startsWith('_______') || question.sentence.startsWith('A/An _______')) {
+                displayWord = displayWord.charAt(0).toUpperCase() + displayWord.slice(1);
+            }
+
+            const fullSentence = question.sentence.replace('_______', `<strong>${displayWord}</strong>`);
+
+            item.innerHTML = `
+                <p class="word-info">${question.baseForm} <span>(${question.pos}) ${question.definition_ch}</span></p>
+                <p class="sentence-info">${fullSentence}</p>
+            `;
+            revisionList.appendChild(item);
+        });
+    }
+
+    function resetToTitle() {
+        endScreen.style.display = 'none';
+        quizScreen.style.display = 'none';
+        startScreen.style.display = 'block';
+    }
+
+    nextBtn.addEventListener('click', handleNextQuestion);
+    restartBtn.addEventListener('click', resetToTitle);
+    returnBtn.addEventListener('click', resetToTitle);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        startScreen.style.display = 'block';
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+
+</script>
+
+
+
+</body></html>
